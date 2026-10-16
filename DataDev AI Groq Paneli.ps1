@@ -1,10 +1,10 @@
-﻿$ErrorActionPreference = "Continue"
+$ErrorActionPreference = "Continue"
 try { [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false); [Console]::InputEncoding = New-Object System.Text.UTF8Encoding($false) } catch {}
 $Base = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Api = "http://127.0.0.1:8765"
 $Log = Join-Path $Base "datadev_api_requests.jsonl"
-$TrainLog = Join-Path $Base "datadev_gpt_v4_train.log"
-$ModelFile = Join-Path $Base "datadev_gpt_v4_model.pt"
+$TrainLog = Join-Path $Base "datadev_gpt_v5_train.log"
+$ModelFile = Join-Path $Base "datadev_gpt_v5_model.pt"
 $LearnFile = Join-Path $Base "datadev_interaction_training.jsonl"
 $LearnMarker = Join-Path $Base "datadev_interaction_training_last_run.txt"
 $SettingsFile = Join-Path $Base "datadev_panel_settings.json"
@@ -89,7 +89,7 @@ function OgrenmeDurumu {
  Write-Host ("Eğitim kuyruğundaki onaylı örnek sayısı: "+$approved.Count)
  foreach ($e in $approved) {Write-Host ""; Write-Host ("Soru: "+$e.question); Write-Host ("Eğitim cevabı: "+$e.answer) -ForegroundColor Green}
  Write-Host ""; Write-Host "MODEL DOSYASI:" -ForegroundColor Cyan
- if (Test-Path $ModelFile) {$f=Get-Item $ModelFile; Write-Host $f.FullName; Write-Host ("Son değişiklik: "+$f.LastWriteTime); Write-Host ("Boyut: "+[math]::Round($f.Length/1MB,2)+" MB")} else {Write-Host "v4 model dosyası yok." -ForegroundColor Yellow}
+ if (Test-Path $ModelFile) {$f=Get-Item $ModelFile; Write-Host $f.FullName; Write-Host ("Son değişiklik: "+$f.LastWriteTime); Write-Host ("Boyut: "+[math]::Round($f.Length/1MB,2)+" MB")} else {Write-Host "v5 model dosyası yok." -ForegroundColor Yellow}
  if (Test-Path $LearnMarker) {Write-Host ("Panelde kaydedilen son eğitim: "+(Get-Content $LearnMarker -Raw -Encoding UTF8).Trim())} else {Write-Host "Bu panelden henüz başarılı eğitim kaydı yok." -ForegroundColor Yellow}
  Write-Host ""; Write-Host "SON EĞİTİM GÜNLÜĞÜ:" -ForegroundColor Cyan
  if (Test-Path $TrainLog) {Get-Content $TrainLog -Tail 15 -Encoding UTF8|ForEach-Object {Write-Host $_}} else {Write-Host "Eğitim günlüğü bulunamadı."}
@@ -122,7 +122,7 @@ function YenidenEgit {
  Write-Host "Bu işlem CPU kullanır ve zaman alabilir."
  if ((Read-Host "Başlatmak için EGIT yaz") -cne "EGIT") {Write-Host "İptal edildi."; Wait-Menu; return}
  Push-Location $Base
- try {python datadev_gpt_v4.py; $code=$LASTEXITCODE} finally {Pop-Location}
+ try {python datadev_gpt_v5.py; $code=$LASTEXITCODE} finally {Pop-Location}
  if ($code -eq 0) {(Get-Date).ToString("o")|Set-Content -LiteralPath $LearnMarker -Encoding UTF8; Write-Host "Eğitim başarıyla tamamlandı." -ForegroundColor Green} else {Write-Host ("Eğitim hata koduyla bitti: "+$code) -ForegroundColor Red}
  Wait-Menu
 }

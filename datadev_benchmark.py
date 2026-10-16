@@ -9,7 +9,7 @@ BASE = Path(__file__).resolve().parent
 TESTS = BASE / "datadev_benchmark_questions.jsonl"
 RESULTS = BASE / "datadev_benchmark_results.jsonl"
 REPORT = BASE / "datadev_benchmark_report.txt"
-MODEL = BASE / "datadev_gpt_v4_model.pt"
+MODEL = BASE / "datadev_gpt_v5_model.pt"
 
 def now():
     return datetime.now().astimezone().isoformat()
@@ -29,10 +29,10 @@ def main():
     if sync_script.exists():
         subprocess.run([sys.executable, str(sync_script)], cwd=str(BASE), check=False)
     import torch
-    import datadev_gpt_v4 as core
+    import datadev_gpt_v5 as core
     torch.set_num_threads(1)
     if not MODEL.exists():
-        print("HATA: datadev_gpt_v4_model.pt bulunamadi. Model testi yapilamadi.")
+        print("HATA: datadev_gpt_v5_model.pt bulunamadi. Model testi yapilamadi.")
         print("Not: Bu test egitim baslatmaz.")
         return 2
     checkpoint = torch.load(MODEL, map_location=core.DEVICE, weights_only=False)

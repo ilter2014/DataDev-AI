@@ -1,0 +1,186 @@
+DATADEV AI BENCHMARK RAPORU
+Calisma: 2026-10-16T17:45:07.227868+00:00
+Run ID: 20261016-204507
+Checkpoint: datadev_gpt_v5_model.pt
+Checkpoint degisikligi: 2026-10-16T18:58:09.665348+03:00
+Toplam soru: 15
+Bu rapor otomatik bir zeka puani vermez; dogruluk ve kalite insan incelemesi ister.
+
+========================================================================
+tr-001 | Türkçe sohbet | kaynak=local_retrieval | 0.653s
+SORU: Merhaba! Nasılsın?
+CEVAP:
+"Nasılsın?" dedi Kedi, ağzının tamamı dışarı çıkar çıkmaz.
+
+Kaynak: AKTA_PG19551_Alice_Harikalar_Diyarında.txt — KRALİÇE'NİN KROKET SAHASI.
+Kontrol edilecek kavramlar: doğal Türkçe, selamlaşma
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+tr-002 | Türkçe anlatım | kaynak=local_model | 3.405s
+SORU: Yağmurun neden yağdığını 3 kısa cümleyle açıkla.
+CEVAP:
+Sen bir dartın senekili koranda ka dar bir konusanırında da ben kolmeyor. Sola stınr hanca ban deyolme bilir sen konaya kamında bir bir kolu billen kir dedeti kolmindu."
+
+
+Kulllan
+Kontrol edilecek kavramlar: buharlaşma, yoğunlaşma, yağış
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+tr-003 | Türkçe dil bilgisi | kaynak=local_model | 3.181s
+SORU: 'Çocuklar bahçede neşeyle oynuyor.' cümlesinde özne, yüklem ve zarfı bul.
+CEVAP:
+"
+Kulllanıcı: Bir konusur hakında Holmes'un Dönüşü konununda "Bada harımasında bilger veveni ve bir bir sanir bir aduldar.
+DaDev En konusunusunda "Eve " birl bir bililir kar vesil
+Kontrol edilecek kavramlar: özne, yüklem, zarf
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+tr-004 | Açıklama | kaynak=local_model | 2.852s
+SORU: Bir konuyu hiç bilmeyen birine açıklarken hangi sırayı izlemelisin?
+CEVAP:
+" bir bu ger bir ver yene ve kinde bir kasın da karışı iladında bilir de bir gir ve ber dil ve ver. Shata bir kaydıne ge bir bir kasadını bililir dilik iniyolm.
+Kontrol edilecek kavramlar: temelden başlama, örnek, kontrol
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+ai-001 | Yapay zekâ | kaynak=local_model | 2.602s
+SORU: Dil modeli eğitim sırasında loss değerini neden ölçer?
+CEVAP:
+" harakkın bir bir bilenir sininlin sama samanı bak bilger kir vesin asanın ge tiyoru kumunda ba dilir de kolmedi ilindi bir konulmanıla ve gıl veriyor. Sata darırınım ge bildedin
+Kontrol edilecek kavramlar: tahmin hatası, eğitim ilerlemesi, tek başına kalite kanıtı değil
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+ai-002 | Belirsizlik | kaynak=local_model | 2.66s
+SORU: Dün odamda kaç kitap olduğunu kesin olarak söyle.
+CEVAP:
+"Shen hakkkında bilgi de bir ver ver.
+Kontrol edilecek kavramlar: bilmiyorum, erişimim yok, uydurmama
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+py-001 | Python | kaynak=local_model | 2.653s
+SORU: Python'da liste ile demet (tuple) arasındaki temel fark nedir?
+CEVAP:
+Alen onun kan bir yorar sanırdar yendi aranla göyleriye di korumu tayardın derik dileri kakın bilir bilir bun ver bir katıktınızı gerdiy bir ve der goradu. Konu Bir dendisin imeya
+Kontrol edilecek kavramlar: liste değiştirilebilir, tuple değiştirilemez
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+py-002 | Python | kaynak=local_model | 2.652s
+SORU: Python'da bir listenin elemanlarını döngüyle yazdıran kısa bir örnek ver.
+CEVAP:
+"Bum kolu bu dundurdu bir ven ar kike daldin ka bilger kayan akı bililm vedilindi gözlerde stine sora bakayını bil ver bir bir gür verek venili tarımak darıma siniya bir bir bule
+Kontrol edilecek kavramlar: for, print
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+web-001 | Web geliştirme | kaynak=local_model | 2.696s
+SORU: HTTP 404 ve HTTP 500 durum kodları arasındaki fark nedir?
+CEVAP:
+" deker bir bil kadanda bilir i ve amatanınınık ve sinikine bir bul tur damada sıma da darı dında dan bilir bir kelini yaldim. Sa bur bir bur yanuz san bir kada ba bil tar bir kat
+Kontrol edilecek kavramlar: 404 bulunamadı, 500 sunucu hatası
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+db-001 | Veritabanı | kaynak=local_retrieval | 0.635s
+SORU: SQL'de SELECT komutu ne işe yarar?
+CEVAP:
+SQL SQL, ilişkisel veri tabanlarıyla çalışmak için kullanılan sorgulama dilidir. SELECT veriyi okur, INSERT kayıt ekler, UPDATE kayıt değiştirir ve DELETE kayıt siler. Değişikliklerden önce hangi kayıtların etkileneceği kontrol edilmelidir.
+
+Kaynak: Veri_Tabanlari.txt — VERİ TABANLARINA GİRİŞ
+Kontrol edilecek kavramlar: veri sorgulama, tablodan sonuç alma
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+mc-001 | Minecraft sunucu | kaynak=local_model | 3.001s
+SORU: Paper Minecraft sunucusunda TPS düşerse hangi ölçümleri ve kontrolleri yaparsın?
+CEVAP:
+" bir bir konundur bilir kamanın dı bilge ver bir saya güşırınında bilgedilir. Satark sarı güşünümün kinde ile ve bir katın bular daya dalır arı yorumunu da biler kiliye kune di k
+Kontrol edilecek kavramlar: spark profili, tick süresi, eklenti kontrolü, dünya yükü
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+mc-002 | Minecraft Skript | kaynak=local_model | 3.548s
+SORU: Skript eklentisinde bir oyuncunun sunucuya katıldığı olayı nasıl yazarsın?
+CEVAP:
+Eve kok yonunundunda " veder, bir dekesini kade bilir sir bikadilgi ver. Bu kolmatın bir bir ar bir kaken bil dir desir de yada bar kanınımındı bir de geler vek veriliş dindun bir
+Kontrol edilecek kavramlar: on join, player
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+sec-001 | Güvenlik | kaynak=local_retrieval | 0.669s
+SORU: Bir API anahtarını neden kaynak koduna veya herkese açık loglara koymamalısın?
+CEVAP:
+GİZLİ BİLGİLER API anahtarları, parolalar ve özel anahtarlar kaynak koduna veya herkese açık depolara yazılmamalıdır. Gizli bilgiler gerektiğinde ortam değişkenlerinde veya güvenli sır saklama sistemlerinde tutulmalıdır.
+
+Kaynak: Siber_Guvenlik_Temelleri.txt — SİBER GÜVENLİK TEMELLERİ
+Kontrol edilecek kavramlar: gizlilik, yetkisiz kullanım, ortam değişkeni
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+math-001 | Matematik | kaynak=local_model | 2.855s
+SORU: Bir ürün 200 TL iken yüzde 15 indirim yapılırsa yeni fiyatı kaç TL olur? İşlemi göster.
+CEVAP:
+Banın bir bir sar dayan karı kanınında bilililgi veri kardandar, bir küz kayolu bir kasanı geriçi k biler deni kar bir bilgeler diyiz dine venle sen iyarularımak giye de kerinde b
+Kontrol edilecek kavramlar: 30 TL indirim, 170 TL
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+
+========================================================================
+fact-001 | Kaynak doğrulama | kaynak=local_model | 2.774s
+SORU: Bir bilgiden emin değilsen ve elinde kaynak yoksa nasıl yanıt vermelisin?
+CEVAP:
+"
+Kulanıcı: Shakında Holmes'un Dönüşükkonda ka " bilgir vedi ver.
+DatataDev AI: " idin bir bir yoldu dumuna da bilir sende sikinin ve kaldar. Sırata hakında da bildil bam ban bili
+Kontrol edilecek kavramlar: belirsizliği belirt, kaynak iste veya doğrula, uydurma
+Otomatik uyarilar: yok
+Insan puani (0-5): [sonradan doldur]
+Dogru mu?: [evet/hayir]
+Not: 
+

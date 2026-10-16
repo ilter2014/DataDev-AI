@@ -19,8 +19,8 @@ CURRICULUM = BASE / "datadev_curriculum_training.jsonl"
 LOG = BASE / "datadev_gece_egitimi.log"
 STATE = BASE / "datadev_gece_egitimi_state.json"
 MASTER_DATASET = BASE / "datadev_master_dataset.jsonl"
-MODEL = BASE / "datadev_gpt_v4_model.pt"
-MODEL_BACKUP = BASE / "datadev_gpt_v4_model_before_gece.pt"
+MODEL = BASE / "datadev_gpt_v5_model.pt"
+MODEL_BACKUP = BASE / "datadev_gpt_v5_model_before_gece.pt"
 MODEL_NAME = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b")
 HTTP_TIMEOUT = 45
 MAX_RETRIES_BEFORE_COOLDOWN = 3
@@ -109,7 +109,7 @@ def append_pairs(pairs, topic, stage, source):
     return count
 
 def groq_lesson(topic, stage, recent_topics, next_hint=""):
-    import datadev_gpt_v4 as core
+    import datadev_gpt_v5 as core
     key = core.get_groq_api_key()
     if not key:
         raise RuntimeError("Groq API anahtarı bulunamadı; anahtar dosyasının içeriği loglanmayacak.")
@@ -163,7 +163,7 @@ def groq_lesson(topic, stage, recent_topics, next_hint=""):
 
 def learn_from_local_records(topic, stage):
     """When Groq is down, create grounded practice pairs from existing local books/articles."""
-    import datadev_gpt_v4 as core
+    import datadev_gpt_v5 as core
     pairs = []
     probes = [
         f"{topic} nedir? Açıkla.",
@@ -200,7 +200,7 @@ def fine_tune_local(steps=60):
     """Short, low-priority update from saved local/Groq curriculum while the teacher API is unavailable."""
     import torch
     import random
-    import datadev_gpt_v4 as core
+    import datadev_gpt_v5 as core
     if not MODEL.exists():
         log("Ara eğitim atlandı: yerel model dosyası yok.")
         return False
@@ -240,7 +240,7 @@ def fine_tune_local(steps=60):
             config["night_finetune_steps"] = int(config.get("night_finetune_steps", 0)) + max(1, int(steps))
             config["night_finetune_val_loss"] = updated
             config["night_finetune_at"] = datetime.now().astimezone().isoformat()
-            temp_model = MODEL.with_name("datadev_gpt_v4_model.finetune.tmp")
+            temp_model = MODEL.with_name("datadev_gpt_v5_model.finetune.tmp")
             torch.save({"model": model.state_dict(), "chars": chars, "config": config}, temp_model)
             temp_model.replace(MODEL)
             log("Doğrulama kaybı düştü; iyileşen ara model atomik olarak kaydedildi.")
@@ -253,7 +253,7 @@ def fine_tune_local(steps=60):
 
 def run_training():
     import torch
-    import datadev_gpt_v4 as core
+    import datadev_gpt_v5 as core
     torch.set_num_threads(CPU_THREADS)
     log("Toplanan müfredatla tam yerel eğitim başlıyor (CPU tek iş parçacığı, düşük öncelik).")
     if not MODEL.exists():
@@ -304,7 +304,7 @@ def main():
     try:
         import torch
         torch.set_num_threads(CPU_THREADS)
-        import datadev_gpt_v4 as core
+        import datadev_gpt_v5 as core
         log("DATADEV AI GECE EĞİTİM MODU BAŞLADI.")
         log(f"CPU mantıksal çekirdek={os.cpu_count() or 'bilinmiyor'}; Torch iş parçacığı={CPU_THREADS}; öncelik=düşük.")
         log(f"Mevcut yerel kaynaklar: makale={len(list((BASE/'makaleler').glob('*.txt')))}; kitap={len(list((BASE/'kitaplar').glob('*.txt')))}.")

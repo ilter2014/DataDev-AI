@@ -5,12 +5,12 @@ from datetime import datetime, timezone
 import json, time, hashlib
 
 import torch
-import datadev_gpt_v4 as core
+import datadev_gpt_v5 as core
 import datadev_local_knowledge as local_knowledge
 
 BASE = Path(__file__).resolve().parent
-MODEL_FILE = BASE / "datadev_gpt_v4_model.pt"
-LEGACY_MODEL = BASE / "datadev_gpt_v3_model.pt"
+MODEL_FILE = BASE / "datadev_gpt_v5_model.pt"
+LEGACY_MODEL = BASE / "datadev_gpt_v5_model.pt"
 LOOP_LOG = BASE / "datadev_review_loop.jsonl"
 CANDIDATES = BASE / "datadev_loop_candidates.jsonl"
 USER_LEARNING = BASE / "datadev_user_learning.jsonl"
@@ -27,7 +27,7 @@ def append_jsonl(path, item):
 def load_local_model():
     active = MODEL_FILE if MODEL_FILE.exists() else LEGACY_MODEL
     if not active.exists():
-        raise FileNotFoundError("Model dosyası bulunamadı. Önce DataDev GPT v4 eğitimini tamamla.")
+        raise FileNotFoundError("Model dosyası bulunamadı. Önce DataDev GPT v5 eğitimini tamamla.")
     checkpoint = torch.load(active, map_location=core.DEVICE, weights_only=False)
     chars = checkpoint["chars"]
     model = core.TinyGPT(len(chars)).to(core.DEVICE)

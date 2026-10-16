@@ -1,46 +1,15 @@
-DATADEV AI — VERİ SETİ VE SABAH TESTİ
+DATADEV AI — DATASET AND TEST GUIDE
+===================================
 
-BU GECE
-1) "DataDev AI - Gece Eğitimi.bat" dosyasını bir kez çalıştır.
-2) Pencereyi kapatma. Script, Windows'ta destekleniyorsa işlem boyunca uykuya geçmeyi engellemeye çalışır.
-3) Altı saat sonunda ders toplama aşaması biter ve yerel eğitim başlatılır. Model kalitesini garanti etmez.
-4) Aynı eğitim BAT dosyasını ikinci kez çalıştırma; paralel eğitim çakışabilir.
+Current model: DataDev GPT v5
+Model file: datadev_gpt_v5_model.pt
+Training code: datadev_gpt_v5.py
 
-SABAH TESTİ
-1) Önce gece eğitim penceresinin tamamlandığını ve "GECE EĞİTİM MODU TAMAMLANDI" veya hata mesajını verdiğini kontrol et.
-2) Sonra "DataDev AI - Sabah Benchmark.bat" dosyasını çalıştır.
-3) Cevaplar ve test metadata'sı datadev_benchmark_results.jsonl dosyasına eklenir.
-4) Okunabilir son rapor datadev_benchmark_report.txt dosyasına yazılır.
-5) Her cevap için doğruluk, 0-5 kalite puanı ve notları elle değerlendir. Beklenen kavram listesi otomatik başarı puanı değildir.
-6) Modelin testten önceki ve sonraki dosya zamanlarını karşılaştır. Benchmark modeli değiştirmez ve eğitim başlatmaz.
+Keep training data, evaluation questions, benchmark outputs, and review logs. They are evidence of the model's progress and should not be deleted during source-code cleanup.
 
-VERİLER NEREDE?
-- datadev_master_dataset.jsonl: Birleşik kayıt havuzu; eğitim örnekleri, onaylı etkileşimler, benchmark soruları ve test sonuçlarını tür etiketiyle toplar. Sabah benchmark'ı önce kaynak dosyalardaki yeni kayıtları buraya eşitlemeye çalışır.
-- datadev_curriculum_training.jsonl: Groq derslerinden gelen eğitim soru-cevapları. Her satır ayrı JSON kaydıdır.
-- datadev_gece_egitimi_state.json: aşama, ders sayısı ve son başarılı ders.
-- datadev_gece_egitimi.log: çalışma, hata, ara eğitim ve tam eğitim kayıtları.
-- datadev_interaction_training.jsonl: uygulama üzerinden Groq tarafından onaylanan etkileşim örnekleri.
-- datadev_api_requests.jsonl: uygulama API'si kullanıldığında istek/cevap ve denetim geçmişi.
-- datadev_benchmark_questions.jsonl: sabit, tekrarlanabilir test soruları.
-- datadev_benchmark_results.jsonl: her test çalışmasının model cevabı, kaynak türü, süre ve inceleme alanları.
-- datadev_benchmark_report.txt: son testin okunabilir raporu.
-- datadev_gpt_v4_model.pt: yerel model ağırlıkları.
+Useful commands:
+  python -m py_compile datadev_api.py datadev_gpt_v5.py datadev_gece_egitimi.py datadev_gpt_loop.py datadev_benchmark.py datadev_hive.py datadev_hive_sync.py
+  python datadev_benchmark.py
 
-KALİTE GÜVENLİĞİ
-- Groq'un ürettiği her ders kesin doğru kabul edilmez; eğitim kaydı groq_approved=false işaretini taşır.
-- Bir modelin loss değerinin düşmesi, cevaplarının doğru olduğunu kanıtlamaz.
-- Benchmark, yerel uygulamanın retrieval-first davranışını kullanır; Groq API'sini çağırmaz.
-- Model dosyası yoksa test durur. Eğitim sırasında aynı anda test çalıştırmak yerine eğitimin bitmesini bekle.
-- API anahtarını, parolaları veya özel bilgileri test sorularına yazma.
-
-
-DATADEV AI — GROQ DÖNGÜSÜ VE KULLANICIDAN ÖĞRENME
-1) Sohbeti başlat: "DataDev AI - Groq Döngüsü.bat" veya "DataDev GPT v4 - Groq.bat".
-2) DataDev AI kendi yerel taslağını üretir. Groq inceler; yanlışsa geri bildirim verir ve yerel model yeni taslak üretir. Yalnızca Groq KEEP dediğinde yerel taslak gönderilir.
-3) Güvenlik için en fazla 8 tur vardır. Groq hatası, tekrar eden taslak veya tur sınırı olursa onaysız cevap gönderilmez.
-4) Cevabı beğendiysen bir sonraki istemde /onayla yaz. Bu soru-cevap datadev_user_learning.jsonl dosyasına insan onaylı örnek olarak kaydedilir.
-5) Cevap yanlışsa /duzelt Senin doğru cevabın yaz. Senin düzeltmen onaylı eğitim örneği olarak kaydedilir.
-6) /soncevap son cevabı tekrar gösterir. /cikis sohbetten çıkar.
-7) Sorular ve her Groq turu datadev_review_loop.jsonl içinde tutulur. Groq onaylı ama senin onaylamadığın cevaplar datadev_loop_candidates.jsonl içinde aday olarak saklanır.
-8) Kullanıcı onaylı örneklerin model ağırlıklarına yansıması için "DataDev GPT v4 - Egit.bat" çalıştırılır. Bu eğitim mevcut ağırlıklardan devam etmez, modeli yeniden eğitir; önceki model .before_retrain.bak adıyla yedeklenir.
-9) /onayla veya /duzelt, modeli o anda anında değiştirmez; yalnızca onaylı eğitim verisi oluşturur. Eğitimden sonra cevap kalitesi benchmark ile ölçülmelidir.
+Launch chat with DataDev GPT v5.bat. Run the benchmark with DataDev AI - Sabah Benchmark.bat.
+The API, overnight trainer, Groq panel and feedback loop use the v5 code/checkpoint.

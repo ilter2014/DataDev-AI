@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """DataDev GPT v5: ~500k parameter local model with optional Groq answer review."""
 from pathlib import Path
 import argparse, json, math, random, re, time, os, urllib.request, urllib.error
@@ -116,6 +116,22 @@ def build_corpus():
         except (OSError, UnicodeError):
             pass
 
+    # Only human-approved records exported from DataDev Hive are eligible for training.
+    hive_import_file = BASE / "datadev_hive_import.jsonl"
+    if hive_import_file.exists():
+        try:
+            for line in hive_import_file.read_text(encoding="utf-8-sig").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    item = json.loads(line)
+                    q, a = item.get("question"), item.get("answer")
+                    if item.get("approved") is True and isinstance(q, str) and isinstance(a, str) and q.strip() and a.strip():
+                        train_examples.append((q.strip(), a.strip()))
+                except (json.JSONDecodeError, AttributeError):
+                    continue
+        except (OSError, UnicodeError):
+            pass
     # Groq-created lesson material is training-only: it is never used as a direct retrieval answer.
     curriculum_file = BASE / "datadev_curriculum_training.jsonl"
     if curriculum_file.exists():
@@ -401,10 +417,10 @@ def groq_review(question, draft, language="tr"):
                 "reason": f"Groq incelemesi yapılamadı: {type(e).__name__}: {e}"}
 
 def chat():
-    legacy_model = BASE / "datadev_gpt_v3_model.pt"
+    legacy_model = BASE / "datadev_gpt_v5_model.pt"
     active_model = MODEL_FILE if MODEL_FILE.exists() else legacy_model
     if not active_model.exists():
-        print("Önce DataDev GPT v3 - Egit.bat dosyasını çalıştırıp bir modeli eğit.")
+        print("Önce DataDev GPT v5 - Egit.bat dosyasını çalıştırıp modeli eğit.")
         return
     if not get_groq_api_key():
         print("UYARI: Groq API anahtarı yok. groq_api_key.txt dosyasına Groq API anahtarını koy; anahtarsız yerel mod çalışır.", flush=True)

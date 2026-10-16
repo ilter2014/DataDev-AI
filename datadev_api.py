@@ -24,7 +24,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import torch
-import datadev_gpt_v4 as core
+import datadev_gpt_v5 as core
 
 BASE = Path(__file__).resolve().parent
 MAX_BODY_BYTES = 16_384
@@ -49,8 +49,8 @@ def load_local_model():
     global _MODEL, _CHARS, _STOI, _MODEL_MTIME
     with MODEL_LOCK:
         candidates = [
-            BASE / "datadev_gpt_v4_model.pt",
-            BASE / "datadev_gpt_v3_model.pt",
+            BASE / "datadev_gpt_v5_model.pt",
+            BASE / "datadev_gpt_v5_model.pt",
         ]
         checkpoint = next((p for p in candidates if p.exists()), None)
         if checkpoint is None:
@@ -255,7 +255,7 @@ def make_handler(api_token: str, require_auth: bool):
                     "version": "0.1",
                     "model_checkpoint_present": any(
                         (BASE / name).exists()
-                        for name in ("datadev_gpt_v4_model.pt", "datadev_gpt_v3_model.pt")
+                        for name in ("datadev_gpt_v5_model.pt",)
                     ),
                     "groq_configured": bool(core.get_groq_api_key()),
                     "mode": "local-first"

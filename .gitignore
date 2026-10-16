@@ -17,6 +17,7 @@ datadev_cluster/
 datadev_cluster_model_version.txt
 datadev_api_requests.jsonl
 datadev_api_errors.log
+datadev_hive_import.jsonl
 *_previous.log
 *.tmp
 *.sync-tmp
