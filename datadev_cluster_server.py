@@ -3,7 +3,7 @@
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from datetime import datetime, timezone
-import argparse, base64, io, json, os, secrets, threading, uuid
+import argparse, base64, io, json, os, random, secrets, threading, uuid
 
 import torch
 import datadev_gpt_v5 as core
@@ -224,6 +224,21 @@ class Handler(BaseHTTPRequestHandler):
                             averaged[key] = acc
                         else:
                             averaged[key] = first
+                    # Evaluate the candidate on the fixed validation split before replacing the active model.
+                    _, val_text, _, _, _ = core.build_corpus()
+                    chars = checkpoint["chars"]
+                    stoi = {ch: i for i, ch in enumerate(chars)}
+                    fallback = stoi.get(" ", 0)
+                    val_ids = torch.tensor([stoi.get(ch, fallback) for ch in val_text], dtype=torch.long)
+                    val_batches = core.make_batches(val_ids, core.EVAL_BATCHES, random.Random(2027))
+                    baseline_model = core.TinyGPT(len(chars)).cpu()
+                    baseline_model.load_state_dict(checkpoint["model"])
+                    baseline_loss = core.evaluate(baseline_model, val_batches)
+                    candidate_model = core.TinyGPT(len(chars)).cpu()
+                    candidate_model.load_state_dict(averaged)
+                    candidate_loss = core.evaluate(candidate_model, val_batches)
+                    if candidate_loss > baseline_loss + 0.05:
+                        return send_json(self, 409, {"error": "Doğrulama kaybı kötüleşti; aktif model korunuyor.", "baseline_val_loss": round(baseline_loss, 4), "candidate_val_loss": round(candidate_loss, 4)})
                     meta = load_json(ROOT / "meta.json", {"version": 0})
                     backup_dir = ROOT / "backups"
                     backup_dir.mkdir(parents=True, exist_ok=True)
@@ -243,7 +258,7 @@ class Handler(BaseHTTPRequestHandler):
                     meta["last_aggregated_round"] = round_id
                     meta["updated_at"] = now()
                     save_json(ROOT / "meta.json", meta)
-                return send_json(self, 200, {"ok": True, "round_id": round_id, "model_version": meta["version"], "workers_aggregated": len(updates), "model_file": MODEL_FILE.name})
+                return send_json(self, 200, {"ok": True, "round_id": round_id, "model_version": meta["version"], "workers_aggregated": len(updates), "baseline_val_loss": round(baseline_loss, 4), "candidate_val_loss": round(candidate_loss, 4), "model_file": MODEL_FILE.name})
             return send_json(self, 404, {"error": "Bulunamadı"})
         except FileNotFoundError as exc:
             return send_json(self, 503, {"error": str(exc)})

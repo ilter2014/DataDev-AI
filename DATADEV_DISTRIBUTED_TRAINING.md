@@ -55,7 +55,7 @@ python -X utf8 datadev_cluster_admin.py --server https://YOUR-COORDINATOR-DOMAIN
 python -X utf8 datadev_cluster_admin.py --server https://YOUR-COORDINATOR-DOMAIN aggregate --round-id YOUR_ROUND_ID
 ```
 
-Aggregation is explicit: the server will refuse to merge a round until every task in that round is complete. Workers automatically download a newer central checkpoint on their next poll.
+Aggregation is explicit: the server will refuse to merge a round until every task in that round is complete. It checks update tensor shapes, backs up the previous checkpoint, and compares validation loss before accepting a candidate; if validation loss gets worse beyond the safety margin, the active model is kept. Workers automatically download a newer central checkpoint on their next poll.
 
 ## Important limitations
 
