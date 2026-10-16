@@ -2,7 +2,8 @@
 
 ## GitHub yedeği
 - Özel depo: https://github.com/ilter2014/DataDevAI-Git
-- Tam proje yedeği: `backup/full-project-20261016` dalı
+- İlk tam proje yedeği: `backup/full-project-20261016` dalı
+- Güncel Radmin VPN kurulumu ve betikler: `backup/radmin-cluster-20261016` dalı
 - Model: `datadev_gpt_v5_model.pt`; yaklaşık 497.490 parametre (vocabulary değişirse sayı değişebilir).
 - Bu sistem görevleri üç bilgisayara dağıtır; bilgisayarları tek bir RAM/CPU gibi birleştirmez. Sonuçlar merkezde doğrulanır.
 
