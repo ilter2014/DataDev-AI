@@ -13,10 +13,11 @@
 
 ## 1. VDS (Windows Server 2022)
 1. VDS'ye Radmin VPN kur ve aynı özel ağa katıl.
-2. Proje dosyalarını GitHub'dan al. VDS'nin GitHub erişimi yoksa proje ZIP'ini güvenli şekilde aktar:
+2. Git yüklü ve private depoya erişimin varsa CMD'de çalıştır:
    ```bat
-   git clone --branch backup/full-project-20261016 https://github.com/ilter2014/DataDevAI-Git.git DataDevAI
+   git clone --branch backup/radmin-cluster-20261016 https://github.com/ilter2014/DataDevAI-Git.git DataDevAI
    ```
+   VDS'de GitHub erişimi yoksa İlter PC'deki `DataDevAI-VDS-Kurulum.zip` dosyasını VDS'ye kopyalayıp `DataDevAI` klasörüne çıkar.
 3. `cluster_vds_setup.bat` çalıştır; Python ve PyTorch CPU kurulur, gizli anahtarlar oluşturulur.
 4. `cluster_vds_firewall_setup.bat` dosyasına sağ tıklayıp **Yönetici olarak çalıştır**. VDS'nin Radmin IPv4 adresini ve İlter/Mert'in Radmin IPv4 adreslerini gir.
 5. `cluster_vds_start.bat` çalıştır ve aynı VDS Radmin IP'sini gir. Koordinatör o adrese TCP 8765 üzerinde bağlanır.
@@ -25,7 +26,7 @@
 ## 2. İlter PC ve Mert PC
 Her bilgisayarda:
 1. Radmin VPN'i aç; aynı özel ağa katıl. `ipconfig` ile kendi Radmin IP'ni öğren.
-2. Tam proje klasörünü `backup/full-project-20261016` dalından al. Mert'in özel depoya erişimi yoksa ona yalnızca worker dosyalarını içeren paket gönder.
+2. İlter kendi PC'sinde güncel proje klasörünü kullanır. Mert'in özel depoya erişimi yoksa `Mert-Worker-Paketi.zip` dosyasını gönder.
 3. `cluster_worker_setup.bat` çalıştır.
 4. `cluster_worker_start.bat` çalıştır.
 5. VDS Radmin adresini `http://VDS_RADMIN_IP:8765` biçiminde gir; worker kimliği olarak İlter için `ilter-pc`, Mert için `mert-pc` seç.
