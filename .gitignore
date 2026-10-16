@@ -29,3 +29,4 @@ datadev_api_errors.log
 .venv/
 cluster_secrets.txt
 cluster_secrets.*
+Mert-Worker-Paketi/
