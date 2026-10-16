@@ -1,8 +1,0 @@
-DATADEV AI GÖREV MERKEZİ
-
-1. DataDev AI - Görev Merkezi.bat dosyasını aç.
-2. 1 seçeneğiyle görev paketlerini oluştur.
-3. datadev_worker_packets klasöründeki ilgili worker_tasks.json dosyasını ilgili işçiye ver.
-4. Bu ilk sürüm görev paketlerini yerel olarak üretir; Colab/VDS/GitHub'a otomatik gönderim henüz ekli değildir.
-5. İşçi cevapları doğrulanmamış aday veridir; insan kontrolü olmadan eğitimde kullanılmamalıdır.
-6. Ortak veri kümesi: datadev_master_dataset.jsonl. İşçi sonuçlarını içe aktarma ve otomatik veri birleştirme sonraki aşamada eklenecektir.
