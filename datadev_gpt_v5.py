@@ -116,6 +116,23 @@ def build_corpus():
         except (OSError, UnicodeError):
             pass
 
+    # Only human-approved records exported from DataDev Hive are eligible for training.
+    hive_import_file = BASE / "datadev_hive_import.jsonl"
+    if hive_import_file.exists():
+        try:
+            for line in hive_import_file.read_text(encoding="utf-8-sig").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    item = json.loads(line)
+                    q, a = item.get("question"), item.get("answer")
+                    if item.get("approved") is True and isinstance(q, str) and isinstance(a, str) and q.strip() and a.strip():
+                        train_examples.append((q.strip(), a.strip()))
+                except (json.JSONDecodeError, AttributeError):
+                    continue
+        except (OSError, UnicodeError):
+            pass
+
     # Groq-created lesson material is training-only: it is never used as a direct retrieval answer.
     curriculum_file = BASE / "datadev_curriculum_training.jsonl"
     if curriculum_file.exists():

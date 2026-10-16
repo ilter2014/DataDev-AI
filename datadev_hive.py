@@ -249,6 +249,15 @@ class HiveHandler(BaseHTTPRequestHandler):
                     hits.append({"question": row["question"], "answer": row["answer"],
                                  "approved": row.get("approved", False)})
             return self.send_json(200, {"results": hits[:10]})
+        if parsed.path == "/api/export":
+            # Only human-approved rows may be exported into the local model's training corpus.
+            rows = load_bank()
+            records = [{"question": clean(r.get("question"), 2000),
+                        "answer": clean(r.get("answer"), 8000),
+                        "source": clean(r.get("source", "hive"), 80),
+                        "approved": True}
+                       for r in rows if r.get("approved") and r.get("question") and r.get("answer")]
+            return self.send_json(200, {"records": records, "count": len(records), "exported_at": now()})
         return self.send_json(404, {"error": "Endpoint bulunamadi."})
 
     def do_POST(self):
