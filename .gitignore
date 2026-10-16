@@ -24,3 +24,8 @@ datadev_api_errors.log
 # Local backups of code/model files
 *.bak
 *.before_*
+
+# Local Python environments and private cluster credentials
+.venv/
+cluster_secrets.txt
+cluster_secrets.*
