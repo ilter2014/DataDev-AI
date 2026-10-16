@@ -1,0 +1,18 @@
+DATADEV AI GELİŞTİRME YOL HARİTASI
+
+DataDev AI, yerel bilgisayarda geliştirilen bir öğrenme projesidir. Projenin hedefi aşamalı olarak güvenilir metin arama, kayıtlı soru-cevap ve ileride daha gelişmiş bir dil modeli yeteneği kazanmaktır.
+
+MEVCUT YAKLAŞIM
+Makaleler klasöründeki TXT dosyaları yerel bilgi kaynağıdır. Uygulama sorudaki kelimeleri makale bölümleriyle karşılaştırarak uygun bölümü bulur ve kaynak adını gösterir. Bu yöntem bilgi getirmedir; sinir ağı ağırlıklarını makaleler üzerinde eğitmekle aynı şey değildir.
+
+YENİ BİLGİ EKLEME
+Yeni bir UTF-8 TXT dosyası makaleler klasörüne eklenebilir. Uygulamada /yenile komutu kaynak listesini yeniden okur. Başlıkları ve paragrafları açık tutmak aramayı kolaylaştırır.
+
+KULLANICIDAN ÖĞRENME
+/ogret soru | cevap komutu, kullanıcı tarafından verilen soru ve cevabı ogrettiklerim.json dosyasına kaydeder. Bu kayıt daha sonra benzer soru sorulduğunda kullanılabilir. Bu, model parametrelerini eğitmek değil kalıcı bir bilgi eşleştirmesi eklemektir.
+
+GELECEK ADIMLAR
+Arama kalitesi, eş anlamlılar, konuşma geçmişi, test kümesi ve daha büyük dil modeli ayrı ayrı geliştirilebilir. Büyük bir model eğitmek veri, hesaplama gücü, uygun mimari ve değerlendirme gerektirir.
+
+DOĞRULUK
+Kaynak metin yanlışsa cevap da yanlış olabilir. Kaynak bulunamadığında uygulama bunu söylemelidir. Yeni özellikler eklenirken test sorularıyla davranış kontrol edilmelidir.

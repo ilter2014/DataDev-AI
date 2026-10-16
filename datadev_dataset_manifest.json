@@ -1,0 +1,44 @@
+{
+  "project": "DataDev AI",
+  "unified_dataset": "datadev_master_dataset.jsonl",
+  "dataset_policy": {
+    "canonical_training_dataset": "datadev_curriculum_training.jsonl",
+    "unified_log": "datadev_master_dataset.jsonl",
+    "format": "JSONL, one record per line",
+    "record_types": [
+      "training_example",
+      "approved_interaction",
+      "benchmark_question",
+      "benchmark_result",
+      "interaction_event"
+    ],
+    "lesson_quality": "Groq-generated curriculum examples are candidates and are marked groq_approved=false unless independently approved. Loss is not a factual correctness score."
+  },
+  "files": {
+    "unified_dataset": "datadev_master_dataset.jsonl",
+    "dataset_sync_script": "datadev_dataset_backfill.py",
+    "training_examples": "datadev_curriculum_training.jsonl",
+    "overnight_state": "datadev_gece_egitimi_state.json",
+    "overnight_log": "datadev_gece_egitimi.log",
+    "groq_interaction_review_log": "datadev_api_requests.jsonl",
+    "approved_interaction_examples": "datadev_interaction_training.jsonl",
+    "benchmark_questions": "datadev_benchmark_questions.jsonl",
+    "benchmark_results": "datadev_benchmark_results.jsonl",
+    "benchmark_report": "datadev_benchmark_report.txt",
+    "benchmark_runner": "datadev_benchmark.py",
+    "benchmark_launcher": "DataDev AI - Sabah Benchmark.bat",
+    "guide": "DATASET_VE_TEST_REHBERI.txt"
+  },
+  "benchmark": {
+    "test_count": 15,
+    "auto_score": false,
+    "review_fields": [
+      "human_correct",
+      "human_rating_0_to_5",
+      "human_notes"
+    ],
+    "note": "Run after overnight training has ended; benchmark does not train or modify model weights."
+  },
+  "checkpoint": "datadev_gpt_v4_model.pt",
+  "updated_at": "2026-10-16"
+}

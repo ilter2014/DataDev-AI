@@ -1,0 +1,12 @@
+VERİ KALİTESİ VE TEMİZLEME
+
+Eğitim verisi, modelin öğrendiği örüntüleri belirler. Yanlış, yinelenmiş, tutarsız veya görevle ilgisiz örnekler performansı düşürebilir. Veri miktarı önemlidir ama kalite ve çeşitlilik de değerlidir.
+
+YİNELENEN VERİLER VE ETİKETLER
+Aynı metnin çok kez bulunması bazı ifadelerin gereğinden fazla öğrenilmesine yol açabilir. Yinelenen kayıtları temizlemek daha dengeli veri sağlar. Denetimli veri kümelerinde yanlış etiketler öğrenme sürecini bozar; örnekler düzenli olarak incelenmelidir.
+
+EĞİTİM VE TEST AYRIMI
+Aynı veya çok benzer örneklerin hem eğitim hem test kümesinde bulunması değerlendirmeyi olduğundan iyi gösterebilir. Veri ayrımında yinelenen kayıtlar ve aynı kaynaktan gelen benzer içerikler dikkate alınmalıdır.
+
+GİZLİLİK VE İZİN
+Veri toplarken kişisel bilgiler, kullanım izinleri ve telif koşulları dikkate alınmalıdır. Hassas bilgileri gereksiz yere toplamak veya paylaşmak doğru değildir. Veri kaynaklarının nereden geldiğini kaydetmek iyi uygulamadır.

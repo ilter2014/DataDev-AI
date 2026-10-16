@@ -1,0 +1,21 @@
+METİN ÖZETLEME
+
+Metin özetleme, uzun bir metnin ana fikirlerini daha kısa biçimde sunmayı amaçlar. İyi bir özet önemli bilgileri korurken tekrarları ve ayrıntıları azaltır.
+
+ÇIKARIMSAL ÖZET
+Çıkarımsal özetleme, kaynak metindeki cümleleri seçerek özet oluşturur. Kaynakla tutarlılığı yüksektir ancak metin bazen doğal akmayabilir.
+
+ÜRETİCİ ÖZET
+Üretici özetleme, kaynak içeriği yeni cümlelerle ifade eder. Daha akıcı olabilir ama kaynakta bulunmayan ayrıntı ekleme veya önemli bir noktayı değiştirme riski vardır.
+
+ANA FİKİR
+Özet hazırlanırken metnin amacı, temel iddiaları ve önemli destekleyici bilgiler belirlenmelidir. Örnekler ve tekrarlar, ana fikir için gerekli değilse kısaltılabilir.
+
+UZUNLUK
+Özetin uzunluğu kullanım amacına göre belirlenir. Çok kısa özet önemli ayrıntıları kaybedebilir; uzun özet ise kaynak metnin kısaltılmış kopyasına dönüşebilir.
+
+DOĞRULAMA
+Özetin her iddiası kaynakla karşılaştırılmalıdır. Sayılar, isimler, tarihler ve olumsuzluk ifadeleri özellikle dikkatle kontrol edilmelidir.
+
+DATADEV AI İÇİN
+Makaleler paragraf paragraf saklandığında ilgili bölümler bulunabilir. Şimdiki prototip gelişmiş bir özetleme modeli değildir; kaynak paragrafı doğrudan sunar.

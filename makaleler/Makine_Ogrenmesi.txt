@@ -1,0 +1,27 @@
+MAKİNE ÖĞRENMESİ: TEMEL KAVRAMLAR
+
+Makine öğrenmesi, bilgisayar sistemlerinin örneklerden istatistiksel örüntüler öğrenmesini sağlayan yapay zekâ alanıdır. Geleneksel programlamada kurallar doğrudan yazılırken makine öğrenmesinde model, örnekler ve hedefler üzerinden parametrelerini ayarlar.
+
+DENETİMLİ ÖĞRENME
+Denetimli öğrenmede her eğitim örneğinin bir girdisi ve hedef çıktısı vardır. Örneğin e-posta metninden spam olup olmadığını tahmin etmek sınıflandırma; ev özelliklerinden fiyat tahmin etmek regresyon problemidir.
+
+DENETİMSİZ ÖĞRENME
+Denetimsiz öğrenmede verilerin hazır etiketleri olmayabilir. Kümeleme, benzer örnekleri gruplamaya çalışır. Boyut indirgeme, veriyi daha az sayıda değişkenle temsil etmeye yardımcı olur.
+
+PEKİŞTİRMELİ ÖĞRENME
+Pekiştirmeli öğrenmede bir ajan çevreyle etkileşir, eylemler seçer ve ödül sinyallerinden öğrenir. Amaç, uzun vadede biriken ödülü artıran davranışlar bulmaktır.
+
+EĞİTİM, DOĞRULAMA VE TEST
+Veri seti eğitim, doğrulama ve test parçalarına ayrılabilir. Eğitim parametreleri öğrenmek, doğrulama ayar seçmek, test ise son performansı tarafsız değerlendirmek için kullanılır. Test verisini sürekli ayarlama sırasında kullanmak ölçümü güvenilmez hâle getirir.
+
+AŞIRI VE YETERSİZ ÖĞRENME
+Aşırı öğrenmede model eğitim örneklerine çok uyum sağlar ama yeni örneklerde başarısız olabilir. Yetersiz öğrenmede model verideki temel ilişkileri bile öğrenemeyecek kadar basit veya yetersiz eğitilmiş olabilir.
+
+VERİ SIZINTISI
+Veri sızıntısı, eğitim sırasında modelin gerçekte tahmin anında sahip olmayacağı bilgileri dolaylı veya doğrudan görmesidir. Bu durum test başarısını yapay biçimde yükseltir.
+
+BAŞARIYI ÖLÇME
+Doğruluk oranı tek başına her problemde yeterli değildir. Sınıflar dengesizse kesinlik, duyarlılık ve F1 gibi ölçüler de incelenmelidir. Sayısal tahminlerde ortalama mutlak hata veya ortalama karesel hata kullanılabilir.
+
+ÖZET
+İyi bir makine öğrenmesi sistemi yalnızca düşük eğitim kaybına değil; temsil edici veriye, uygun değerlendirmeye, hata analizine ve yeni örneklere genelleme başarısına ihtiyaç duyar.

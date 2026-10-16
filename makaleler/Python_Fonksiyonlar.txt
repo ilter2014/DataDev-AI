@@ -1,0 +1,18 @@
+PYTHON FONKSİYONLARI
+
+Fonksiyon, belirli bir işi yapan ve gerektiğinde tekrar çağrılabilen kod bloğudur. Fonksiyonlar kod tekrarını azaltır ve programın parçalarını anlaşılır hâle getirir.
+
+TANIMLAMA
+Python'da fonksiyonlar def anahtar sözcüğüyle tanımlanır. Fonksiyon adı ne yaptığını anlatmalı; parametreler fonksiyona dışarıdan değer aktarır.
+
+PARAMETRE VE DÖNÜŞ DEĞERİ
+Parametreler fonksiyonun kullanacağı girdilerdir. return ifadesi hesaplanan sonucu çağıran koda verir. print ekrana yazdırır; return ise değeri programın başka yerinde kullanmayı sağlar.
+
+KAPSAM
+Bir fonksiyon içinde tanımlanan yerel değişkenler genellikle o fonksiyonun içinde geçerlidir. Değişken kapsamını anlamak beklenmedik davranışları önler.
+
+HATA YÖNETİMİ
+Fonksiyonlar beklenen girdileri doğrulayabilir ve uygun hata mesajları verebilir. Hataları yakalarken yalnızca gerçekten yönetilebilecek istisnalar ele alınmalıdır.
+
+TEST
+Fonksiyonlar farklı girdi türleri, boş değerler ve sınır durumlarıyla test edilmelidir. Küçük fonksiyonlar genellikle daha kolay test edilir.

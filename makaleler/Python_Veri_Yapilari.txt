@@ -1,0 +1,15 @@
+PYTHON VERİ YAPILARI
+
+Python'da temel veri yapıları bilgileri düzenli saklamayı ve işlemeyi kolaylaştırır.
+
+LİSTELER
+Liste, sıralı ve değiştirilebilir öğe koleksiyonudur. sayilar = [2, 4, 6] ifadesi üç tam sayı içeren liste oluşturur. İndeksler sıfırdan başlar.
+
+SÖZLÜKLER
+Sözlükler anahtar-değer eşleşmeleri tutar. kisi = {"ad": "Ada", "yas": 20} örneğinde anahtarlar değerlere erişmek için kullanılır. Sözlükler yapılandırılmış kayıtları temsil etmekte yararlıdır.
+
+KÜMELER VE DEMETLER
+Küme benzersiz öğeleri saklar. İki kümenin kesişimi ortak öğeleri, birleşimi ise her iki kümedeki benzersiz öğeleri verir. Demet sıralı ve genellikle değişmez bir koleksiyondur.
+
+DOSYA OKUMA
+Pathlib gibi standart kütüphaneler dosya yollarıyla çalışmayı kolaylaştırır. Metin dosyaları doğru karakter kodlamasıyla, çoğunlukla UTF-8 kullanılarak okunmalıdır. Dosya yoksa veya izin hatası varsa program bu durumu yönetmelidir.

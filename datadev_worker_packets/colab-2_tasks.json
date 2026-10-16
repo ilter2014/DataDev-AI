@@ -1,0 +1,15 @@
+{
+  "worker_id": "colab-2",
+  "tasks": [
+    {
+      "task_id": "20261016-164646-a43a74",
+      "task_type": "qa_generation",
+      "topic": "Minecraft Paper ve Skript",
+      "preferred_worker": "colab-2",
+      "expected_records": 25,
+      "instructions": "Paper 1.21.x ve Skript hakkında Türkçe soru-cevap üret; emin olmadığını uydurma.",
+      "status": "pending",
+      "created_at": "2026-10-16T13:46:46.184962+00:00"
+    }
+  ]
+}

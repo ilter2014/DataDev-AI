@@ -1,0 +1,24 @@
+WINDOWS CMD VE KOMUT SATIRI REHBERİ
+
+Komut satırı, metin komutlarıyla bilgisayarda işlem yapmayı sağlayan arayüzdür. Windows'ta CMD ve PowerShell farklı komut yorumlayıcılarıdır.
+
+KLASÖR DEĞİŞTİRME
+cd komutu çalışma dizinini değiştirir. cd /d C:\Proje gibi bir komut hem sürücüyü hem klasörü değiştirebilir. Klasör ve dosya adlarında boşluk varsa tırnak kullanmak gerekir.
+
+PYTHON DOSYASI ÇALIŞTIRMA
+python program.py komutu Python dosyasını çalıştırır. Python komutunun bulunamaması, kurulumun veya PATH ayarının kontrol edilmesini gerektirebilir.
+
+HATA MESAJLARI
+Traceback, hatanın oluştuğu çağrı zincirini gösterir. En alttaki hata türü ve mesaj çoğu zaman ilk incelenecek yerdir. Dosya yolu ve satır numarası da önemlidir.
+
+BAT DOSYASI
+.bat dosyası Windows komutlarını sırayla çalıştırabilir. @echo off gereksiz komut yankısını azaltır; cd /d "%~dp0" betiğin bulunduğu klasöre geçmeye yarar.
+
+KLASÖR VE DOSYALARI GÖRME
+dir klasördeki öğeleri listeler. mkdir yeni klasör oluşturur. copy dosyayı kopyalar. Del komutu dosyaları silebildiği için kullanılmadan önce hedef yol dikkatle kontrol edilmelidir.
+
+DATADEV AI'Yİ AÇMA
+DataDev AI.bat dosyası proje klasörüne geçip Python sohbet programını başlatır. Sohbet açıkken soru yazılır ve Enter'a basılır. /cikis komutu uygulamadan çıkar.
+
+GÜVENLİ KULLANIM
+İçeriğini anlamadığın komutları yönetici olarak çalıştırma. Dosya silen veya sistem ayarlarını değiştiren komutları kullanmadan önce ne yaptıklarını öğren ve önemli dosyaların yedeğini al.

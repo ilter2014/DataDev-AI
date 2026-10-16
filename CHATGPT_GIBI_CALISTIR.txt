@@ -1,0 +1,15 @@
+DATADEV AI'YI CHATGPT TARZINDA CALISTIRMA
+
+1. Bu klasorde .env adinda bir dosya olustur.
+2. Dosyanin icine su satiri ekle:
+DATADEV_AI_API_KEY=BURAYA_KENDI_API_ANAHTARIN
+3. Istersen model ayarini da ekleyebilirsin:
+DATADEV_AI_MODEL=gpt-4.1-mini
+4. Dosyayi kaydet ve DataDev AI'yi yeniden baslat.
+
+ONEMLI:
+- BURAYA_KENDI_API_ANAHTARIN yazan yere kendi API anahtarini bilgisayarinda ekle.
+- API anahtarini kimseyle paylasma ve sohbet mesajina gonderme.
+- ChatGPT Plus/Free aboneligi API kullanimini otomatik olarak kapsamaz; OpenAI API ayri faturalandirilabilir.
+- API anahtari yoksa DataDev AI yerel makalelerden cevap vermeye devam eder.
+- API anahtari bu program tarafindan ekrana yazdirilmaz.

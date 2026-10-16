@@ -1,0 +1,14 @@
+DATADEV AI PROJESİ
+DataDev AI, yerel bilgisayarda geliştirilen bir yapay zekâ öğrenme projesidir. Projenin dosyaları aynı klasörde tutulur. CMD sohbet uygulaması datadev_cmd.py dosyasıyla çalışır; DataDev AI.bat dosyası bu uygulamayı kolay başlatmak için kullanılır.
+
+MAKALELERDEN BİLGİ BULMA
+makaleler klasöründeki .txt dosyaları yerel bilgi kaynağı olarak okunabilir. Uygulama kullanıcının sorusundaki kelimeleri makale paragraflarıyla karşılaştırarak en ilgili bölümü bulur. Bu yöntem bilgi getirme (retrieval) yaklaşımıdır; makalelerden yeni sinir ağı ağırlıkları eğitmekle aynı şey değildir.
+
+BİLGİ EKLEME
+Yeni bir .txt dosyasını makaleler klasörüne koyup uygulamada /yenile komutunu kullanmak kaynak listesini günceller. Başlıkları ve paragrafları açık tutmak, konuları ayrı bölümlere ayırmak aramayı kolaylaştırır.
+
+DOĞRULUK
+Uygulamanın bulduğu paragraf kaynak metindeki bilgiye dayanır. Kaynak metin yanlışsa yanıt da yanlış olabilir. Uygulama kaynak bulamazsa bunu açıkça söylemelidir; bilgi uydurmamalıdır.
+
+SONRAKİ GELİŞTİRME ADIMLARI
+İlk aşamada dosyalardan bilgi bulma ve kullanıcı tarafından eklenen soru-cevapları saklama uygulanabilir. Daha sonra daha iyi Türkçe arama, kaynak gösterme, konuşma geçmişi ve isteğe bağlı bir gerçek dil modeli eklenebilir. Yerel dosyalar kullanıcı tarafından kontrol edilmelidir.

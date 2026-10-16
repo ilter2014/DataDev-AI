@@ -1,0 +1,14 @@
+YAPAY SİNİR AĞI
+Yapay sinir ağı, öğrenilebilir sayısal parametrelerden oluşan bir hesaplama modelidir. Girdi katmanları veriyi alır, ara katmanlar dönüşümler yapar ve çıktı katmanı tahmin üretir. Ağırlıklar ve bias değerleri eğitim sırasında güncellenir.
+
+KAYIP FONKSİYONU
+Kayıp fonksiyonu model tahminlerinin hedeflerden ne kadar uzak olduğunu sayısallaştırır. Eğitim algoritması kaybı azaltmaya çalışır. Kayıp değerinin düşmesi eğitim verisine uyumun arttığını gösterir; tek başına modelin yeni sorularda iyi olacağını kanıtlamaz.
+
+GRADYAN VE GERİ YAYILIM
+Geri yayılım, kaybın model parametrelerine göre türevlerini hesaplamaya yarar. Gradyanlar, parametrelerin hangi yönde değiştirileceği konusunda bilgi verir. Optimizasyon algoritması bu bilgiyi kullanarak ağırlıkları günceller.
+
+EZBERLEME VE GENELLEME
+Model eğitim örneklerini ezberleyip yeni örneklerde başarısız olursa aşırı öğrenme meydana gelebilir. Daha çeşitli veri, uygun model boyutu, doğrulama seti ve düzenlileştirme yöntemleri genellemeyi iyileştirmeye yardımcı olabilir.
+
+KÜÇÜK KARAKTER MODELİNİN SINIRLARI
+Karakter tabanlı bir model, birkaç önceki karaktere bakarak sonraki karakteri tahmin edebilir. Az veriyle bazı kelimeleri ve cümle kalıplarını taklit eder ama sorunun anlamını çözmeyebilir. Daha iyi bir sohbet sistemi için geniş ve kaliteli soru-cevap verisi, daha uzun bağlam, daha uygun bir mimari ve dikkatli değerlendirme gerekir.

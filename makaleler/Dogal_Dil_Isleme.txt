@@ -1,0 +1,27 @@
+DOĞAL DİL İŞLEME
+
+Doğal dil işleme, bilgisayarların insan dilindeki metinleri işlemesine yönelik yöntemler alanıdır. Metin sınıflandırma, bilgi çıkarımı, çeviri, özetleme ve soru cevaplama gibi görevleri kapsar.
+
+ÖN İŞLEME
+Metin normalleştirme, büyük-küçük harf dönüşümü, noktalama işaretlerini ele alma ve yazım farklılıklarını yönetme işlemlerini içerebilir. Ön işleme, görev için yararlı bilgileri yanlışlıkla silmemelidir.
+
+TOKENİZASYON
+Tokenizasyon metni daha küçük parçalara ayırır. Bu parçalar kelimeler, alt kelimeler veya karakterler olabilir. Kelime tabanlı yöntemler sözlük büyümesiyle karşılaşabilir; karakter tabanlı yöntemler yazım örüntülerini öğrenebilir fakat daha uzun dizilere ihtiyaç duyabilir.
+
+VEKTÖR TEMSİLLERİ
+Makine öğrenmesi modelleri metni sayısal biçimde temsil eder. Kelime torbası yöntemi kelime sayımlarına dayanır. Gömme vektörleri, kelime veya tokenları öğrenilebilir sayısal uzayda temsil eder.
+
+BAĞLAM
+Bir kelimenin anlamı çevresindeki kelimelere göre değişebilir. Bağlamı dikkate almayan basit sistemler aynı kelimenin farklı anlamlarını ayırt etmekte zorlanır. Daha gelişmiş modeller bağlam temsillerini hesaplamaya çalışır.
+
+BİLGİ GETİRME VE ÜRETİM
+Bilgi getirme sistemi kaynak metinlerde ilgili bölümleri arar ve kullanıcıya sunar. Üretici dil modeli ise öğrendiği örüntülerden yeni metin oluşturur. Bu iki yaklaşım bir arada kullanılabilir; bulunan kaynaklar yanıtların kontrolünü kolaylaştırır.
+
+DEĞERLENDİRME
+Metin sistemleri göreve göre değerlendirilmelidir. Sınıflandırmada F1, aramada ilk sonuçların alaka düzeyi, özetlemede ise otomatik ölçüler ve insan değerlendirmesi kullanılabilir. Akıcı görünen metin her zaman doğru değildir.
+
+TÜRKÇEYE ÖZGÜ NOKTALAR
+Türkçe eklemeli bir dildir; kelimeler çok sayıda ek alabilir. Büyük-küçük harf dönüşümünde I ve İ ayrımına dikkat edilmelidir. Ş, Ğ, Ç, Ö, Ü ve noktasız ı karakterlerinin korunması yazım kalitesini artırır.
+
+ETİK VE GÜVENLİK
+Metinler kişisel bilgiler içerebilir. Eğitim verisi uygun izinlerle kullanılmalı, hassas veriler korunmalı ve sistemin ürettiği yanlış bilgilerin etkisi değerlendirilmelidir.

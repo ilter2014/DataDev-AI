@@ -1,0 +1,27 @@
+YAPAY ZEKÂ MODELİ NASIL DEĞERLENDİRİLİR?
+
+Bir modelin iyi olup olmadığını belirlemek için hedef görev, kullanıcı ihtiyacı ve hata türleri tanımlanmalıdır. Tek bir örneğin iyi cevap vermesi genel başarı kanıtı değildir.
+
+TEST SETİ
+Test seti eğitim sırasında kullanılmayan örneklerden oluşmalıdır. Test soruları modelin gerçek kullanımını temsil etmelidir. Test verisi küçük veya dengesizse sonuçlar belirsiz olabilir.
+
+KARŞILAŞTIRMA TABANI
+Yeni model, basit bir kural tabanlı yöntem veya önceki sürümle karşılaştırılabilir. Basit bir tabanın bile çözemediği problemler tanımlanmalı ve hangi geliştirmelerin fayda sağladığı ölçülmelidir.
+
+HATA SINIFLARI
+Yanlış cevap, eksik cevap, kaynak bulamama, yanlış kaynağa dayanma ve anlaşılmaz dil farklı hata türleridir. Hataları sınıflandırmak hangi bileşenin geliştirilmesi gerektiğini gösterir.
+
+İNSAN DEĞERLENDİRMESİ
+İnsan değerlendiriciler doğruluk, alaka, açıklık ve kaynak kullanımını inceleyebilir. Ölçütler önceden belirlenirse farklı sürümler daha tutarlı karşılaştırılır.
+
+KAYNAKLI YANITLAR
+Bilgi getirme sistemlerinde yalnızca cevabın akıcılığı değil, kaynağın soruyla ilgisi ve metnin cevabı gerçekten desteklemesi de kontrol edilmelidir.
+
+REGRESYON TESTİ
+Önceden belirlenmiş sorular her yeni sürümde yeniden denenebilir. Bir geliştirme bir alanda başarıyı artırırken başka bir alanda gerilemeye neden olabilir.
+
+GÜVEN VE BELİRSİZLİK
+Sistem kaynak bulamadığında bunu açıkça söylemelidir. Düşük güvenli bir tahmini kesin gerçek gibi sunmamak önemlidir. Yapay zekâ çıktıları kritik kararlar için bağımsız doğrulama gerektirebilir.
+
+DATADEV AI TEST LİSTESİ
+Yapay zekâ nedir, Python nedir ve sinir ağı nasıl öğrenir gibi sorular denenebilir. Ayrıca ilgisiz sorular, yazım hataları, Türkçe karakterler ve boş girdi test edilmelidir.

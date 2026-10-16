@@ -1,0 +1,10 @@
+{
+  "task_id": "20261016-164646-3d11d0",
+  "task_type": "dataset_audit",
+  "topic": "Veri kalite denetimi",
+  "preferred_worker": "birsunucum-vds",
+  "expected_records": 0,
+  "instructions": "Veriyi değiştirmeden tekrarları ve şüpheli kayıtları raporla.",
+  "status": "pending",
+  "created_at": "2026-10-16T13:46:46.184962+00:00"
+}

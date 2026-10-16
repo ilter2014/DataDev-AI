@@ -1,0 +1,24 @@
+ALGORİTMALAR VE VERİ YAPILARI
+
+Algoritma, bir problemi çözmek için izlenen açık işlem adımlarıdır. İyi bir algoritma doğru sonuç üretmeli ve kaynakları makul biçimde kullanmalıdır.
+
+ZAMAN KARMAŞIKLIĞI
+Zaman karmaşıklığı, girdi büyüdükçe işlem sayısının nasıl arttığını anlatır. O(1) sabit, O(n) doğrusal, O(n log n) birçok verimli sıralama algoritmasında görülen, O(n²) ise iç içe döngülerde sık görülen büyüme sınıflarıdır. Gerçek süre donanıma ve uygulamaya da bağlıdır.
+
+DİZİ VE LİSTE
+Liste, öğeleri sıralı tutar ve indeksle erişim sağlar. Listeye ekleme veya ortadan silme işlemlerinin maliyeti, yapılan işlemin konumuna ve uygulamaya bağlıdır.
+
+SÖZLÜK VE KÜME
+Sözlük anahtarları değerlere eşler. Küme benzersiz öğeler tutar. Python'da sözlük ve küme, ortalama durumda üyelik kontrolü ve anahtar araması için hızlıdır.
+
+ARAMA
+Doğrusal arama öğeleri sırayla kontrol eder. İkili arama, sıralı bir dizide her adımda arama alanını yarıya indirir. İkili arama için verinin sıralı olması gerekir.
+
+SIRALAMA
+Sıralama algoritmaları öğeleri belirli bir sıraya dizer. Küçük örneklerde basit yöntemler yeterli olabilir; büyük verilerde daha iyi karmaşıklığa sahip algoritmalar önem kazanır.
+
+TEST VE DOĞRULUK
+Algoritmalar normal durumların yanı sıra boş girdi, tek öğe, tekrar eden değerler ve beklenmeyen girdilerle de test edilmelidir. Birkaç örneğin çalışması tüm durumların doğru olduğunu kanıtlamaz.
+
+YAPAY ZEKÂ İLE İLİŞKİ
+Veri yapıları, eğitim örneklerini, kelime sözlüklerini, model parametrelerini ve arama indekslerini saklamak için kullanılır. Verimli veri işleme, büyük projelerde hız ve bellek kullanımını etkiler.

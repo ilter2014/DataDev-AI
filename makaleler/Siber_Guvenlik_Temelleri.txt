@@ -1,0 +1,24 @@
+SİBER GÜVENLİK TEMELLERİ
+
+Siber güvenlik, bilgisayar sistemlerini, ağları ve verileri yetkisiz erişim, bozulma ve kesintiye karşı koruma çalışmalarını kapsar. Güvenlik yalnızca yazılım değil, insan davranışı ve süreçlerle de ilgilidir.
+
+GİZLİLİK, BÜTÜNLÜK, ERİŞİLEBİLİRLİK
+Gizlilik, veriye yalnızca yetkili kişilerin ulaşabilmesidir. Bütünlük, verinin izinsiz değiştirilmemesidir. Erişilebilirlik, sistem ve verilerin gerektiğinde kullanılabilir olmasıdır.
+
+GÜÇLÜ PAROLALAR
+Her hizmet için farklı ve uzun parola kullanmak, parola yöneticisinden yararlanmak ve mümkünse çok faktörlü kimlik doğrulamayı açmak hesap güvenliğini artırır. Parolalar başkalarıyla paylaşılmamalıdır.
+
+GÜNCELLEME
+İşletim sistemi ve uygulama güncellemeleri güvenlik açıklarını kapatabilir. Güncelleme yapmak, yedek almak ve yalnızca güvenilir kaynaklardan yazılım yüklemek önemlidir.
+
+OLTALAMA
+Oltalama mesajları kullanıcıyı sahte sayfalara yönlendirerek parola veya ödeme bilgisi almaya çalışabilir. Gönderen adresi, bağlantı hedefi ve aciliyet baskısı dikkatle incelenmelidir. Şüpheli dosyalar açılmamalıdır.
+
+YEDEKLEME
+Önemli dosyaların ayrı bir konumda yedeğini tutmak, cihaz arızası veya zararlı yazılım durumunda kaybı azaltır. Yedeklerin gerektiğinde geri yüklenebildiği test edilmelidir.
+
+GİZLİ BİLGİLER
+API anahtarları, parolalar ve özel anahtarlar kaynak koduna veya herkese açık depolara yazılmamalıdır. Gizli bilgiler gerektiğinde ortam değişkenlerinde veya güvenli sır saklama sistemlerinde tutulmalıdır.
+
+YAPAY ZEKÂ PROJELERİNDE GÜVENLİK
+Kullanıcı girdisini kod gibi çalıştırmamak, dosya erişimini gerekli klasörlerle sınırlamak, bağımlılıkları güncellemek ve verileri yedeklemek temel önlemlerdir. Model çıktısı otomatik olarak güvenilir kabul edilmemelidir.

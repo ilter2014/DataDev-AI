@@ -1,0 +1,18 @@
+PYTHON VERİ TÜRLERİ
+
+Python'da temel veri türleri metin, tam sayı, ondalıklı sayı, mantıksal değerler, listeler, demetler, kümeler ve sözlüklerdir.
+
+METİNLER
+str türü metinleri temsil eder. Metinler değiştirilemez; bir metin üzerinde işlem yapmak çoğunlukla yeni bir metin üretir. Türkçe karakterler Unicode ile saklanabilir.
+
+SAYILAR
+int tam sayıları, float kayan noktalı sayıları temsil eder. Ondalıklı hesaplamalarda kayan nokta hassasiyetine dikkat edilmelidir.
+
+LİSTELER VE DEMETLER
+Listeler sıralı ve değiştirilebilir koleksiyonlardır. Demetler sıralıdır fakat oluşturulduktan sonra öğeleri değiştirilemez.
+
+SÖZLÜKLER VE KÜMELER
+Sözlük anahtar-değer eşleşmelerini saklar. Küme yinelenmeyen öğeleri tutar ve ortak öğeleri bulmak gibi küme işlemlerini destekler.
+
+TÜR DÖNÜŞÜMÜ
+int(), float() ve str() bazı değerleri başka türlere dönüştürebilir. Her dönüşüm başarılı olmayabilir; geçersiz metin sayı türüne dönüştürülemeyebilir.

@@ -1,0 +1,12 @@
+GIT VE YAZILIM PROJESİ YÖNETİMİ
+
+Git, dosyalardaki değişikliklerin geçmişini izlemek için kullanılan dağıtık sürüm kontrol sistemidir. Geliştiriciler önceki sürümlere dönebilir, dallarda deney yapabilir ve değişiklikleri karşılaştırabilir.
+
+DEPO VE COMMIT
+Git deposu proje geçmişini saklar. git init yeni bir depo oluşturur; git status değişikliklerin durumunu gösterir. Commit, belirli değişikliklerin kaydedilmiş bir anlık görüntüsüdür. Açıklayıcı commit mesajları geçmişi anlamayı kolaylaştırır.
+
+BRANCH
+Branch, ana geçmişi doğrudan değiştirmeden ayrı bir geliştirme çizgisinde çalışmayı sağlar. İş tamamlandığında değişiklikler birleştirilebilir. Çakışmalar aynı bölümlerin farklı biçimde değiştirilmesinden kaynaklanabilir.
+
+GİZLİ BİLGİLER
+Kod depolarına parola, API anahtarı veya kişisel veri eklenmemelidir. Gizli bilgiler ortam değişkenlerinde veya güvenli sır yönetim sisteminde tutulmalıdır. Yedekler ve sürüm kontrolü birbirinin tam yerine geçmez.

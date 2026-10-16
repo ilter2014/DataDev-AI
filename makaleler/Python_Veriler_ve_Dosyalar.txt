@@ -1,0 +1,24 @@
+PYTHON'DA DOSYALAR VE VERİLER
+
+Python programları metin dosyalarını okuyabilir, yazabilir ve verileri kalıcı olarak saklayabilir. Dosya işlemlerinde karakter kodlamasını açıkça belirtmek, özellikle Türkçe metinlerde önemlidir.
+
+UTF-8 KODLAMASI
+UTF-8, Türkçe karakterleri de destekleyen yaygın bir metin kodlamasıdır. Dosya açarken encoding="utf-8" kullanmak metinlerin doğru okunmasına yardımcı olur. Farklı kodlamayla kaydedilmiş dosyalar bozuk karakterlere neden olabilir.
+
+DOSYA OKUMA
+Bir metin dosyası açılıp içeriği okunabilir. Dosyanın bulunmaması, izinlerin yetersiz olması veya kodlamanın farklı olması hata oluşturabilir. Bu durumlar uygun hata yönetimiyle ele alınmalıdır.
+
+JSON
+JSON, sözlükler ve listeler gibi yapılandırılmış verileri metin biçiminde saklar. Python'da json.dumps veriyi metne dönüştürür, json.loads ise metinden veri oluşturur. ensure_ascii=False, Türkçe karakterlerin okunabilir kalmasına yardımcı olur.
+
+YOL YÖNETİMİ
+Dosya yollarını birleştirmek için pathlib.Path kullanmak, farklı sistemlerde daha güvenilir kod yazmayı sağlar. Programın çalışma dizinine güvenmek yerine dosyanın bulunduğu klasörü temel almak kullanışlıdır.
+
+HATA YÖNETİMİ
+try ve except blokları beklenen dosya hatalarını yönetebilir. Her hatayı sessizce yok saymak yerine anlamlı mesaj vermek, sorunu çözmeyi kolaylaştırır.
+
+VERİYİ GÜVENLİ SAKLAMA
+Kullanıcı girdisini doğrudan kod olarak çalıştırmak tehlikelidir. JSON gibi veri formatları, kullanıcı tarafından eklenen soru-cevapları veri olarak saklamak için uygundur. Önemli dosyaların yedekleri tutulmalıdır.
+
+DATADEV AI'DE KULLANIM
+DataDev AI makale klasöründeki .txt dosyalarını okuyarak yerel bilgi araması yapar. Yeni metin eklendiğinde /yenile komutu kaynak listesini günceller. /ogret komutuyla eklenen soru-cevaplar ogrettiklerim.json dosyasına kaydedilir.

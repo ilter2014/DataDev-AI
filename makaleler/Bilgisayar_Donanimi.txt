@@ -1,0 +1,21 @@
+BİLGİSAYAR DONANIMI
+
+Bilgisayar donanımı, yazılımların çalışmasını sağlayan fiziksel bileşenlerdir. Performans tek bir parçaya değil, işlemci, bellek, depolama ve diğer bileşenlerin birlikte çalışmasına bağlıdır.
+
+CPU
+İşlemci genel amaçlı hesaplamaları yürütür. Çekirdek sayısı, saat hızı, mimari ve önbellek performansı etkileyebilir; daha yüksek saat hızı her görevde otomatik olarak daha hızlı sonuç demek değildir.
+
+RAM
+RAM, çalışan programların geçici olarak kullandığı bellektir. Bellek yetersizse sistem depolamaya başvurabilir ve performans düşebilir. RAM kapatıldığında normalde kalıcı veri olarak saklanmaz.
+
+SSD VE HDD
+SSD'ler flash bellek kullanır ve çoğu işte mekanik HDD'lerden daha düşük erişim gecikmesine sahiptir. HDD'ler dönen manyetik plakalar kullanır ve büyük miktarda veriyi daha düşük maliyetle saklayabilir.
+
+GPU
+GPU çok sayıda işlemi paralel yürütmek için tasarlanmıştır. Görüntü işleme ve sinir ağı hesaplarında faydalı olabilir. Her yapay zekâ uygulaması GPU gerektirmez.
+
+SOĞUTMA VE GÜÇ
+Yetersiz soğutma işlemcinin hızını düşürmesine neden olabilir. Güç kaynağı sistem bileşenlerine yeterli ve kararlı enerji sağlamalıdır.
+
+YAPAY ZEKÂ İÇİN
+Modelin bellek ihtiyacı model boyutu, veri türü ve eğitim yöntemine bağlıdır. Küçük yerel projeler CPU ile başlayabilir; büyük modeller çok daha fazla bellek ve hesaplama gerektirir.

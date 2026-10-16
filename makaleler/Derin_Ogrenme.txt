@@ -1,0 +1,27 @@
+DERİN ÖĞRENME VE ÇOK KATMANLI AĞLAR
+
+Derin öğrenme, birden fazla öğrenilebilir katman kullanan sinir ağlarıyla temsil öğrenmeye odaklanır. Katmanlar girdiyi art arda dönüştürür ve daha karmaşık örüntüler yakalamaya çalışır.
+
+NÖRON VE AĞIRLIK
+Basit bir yapay nöron, girdileri ağırlıklarla çarpar, toplama bias terimini ekler ve sonucu bir aktivasyon fonksiyonundan geçirir. Ağırlıklar eğitimde öğrenilir; bias, modelin karar sınırını esnetmesine yardımcı olur.
+
+AKTİVASYON FONKSİYONLARI
+ReLU negatif değerleri sıfırlar ve pozitif değerleri korur. Tanh değerleri eksi bir ile artı bir arasına sıkıştırır. Sigmoid sonucu sıfır ile bir arasına taşır. Softmax, çok sınıflı sınıflandırmada skorları toplamı bire eşit olasılık değerlerine dönüştürür.
+
+KAYIP VE OPTİMİZASYON
+Kayıp fonksiyonu tahmin ile hedef arasındaki farkı ölçer. Gradyan inişi, parametreleri kaybı azaltacak yönde günceller. Öğrenme oranı çok büyükse eğitim kararsız olabilir; çok küçükse öğrenme yavaş ilerleyebilir.
+
+GERİ YAYILIM
+Geri yayılım, zincir kuralını kullanarak kaybın ağdaki parametrelere göre türevlerini hesaplar. Optimizasyon algoritması bu gradyanları ağırlıkları güncellemek için kullanır.
+
+TOPLU EĞİTİM VE EPOCH
+Bir epoch, eğitim verisinin tamamının model tarafından bir kez işlenmesidir. Batch, tek bir güncellemede kullanılan örnek grubudur. Çok fazla epoch, veri küçükse ezberlemeyi artırabilir.
+
+DÜZENLİLEŞTİRME
+Dropout, ağırlık cezası, veri artırma ve erken durdurma gibi teknikler aşırı öğrenmeyi azaltmaya yardımcı olabilir. Her yöntem her problemde aynı sonucu vermez.
+
+DONANIM VE HESAPLAMA
+Büyük ağlar çok sayıda matris işlemi yapar. CPU küçük deneyler için yeterli olabilir; GPU paralel işlemleri hızlandırabilir. Model boyutu, bellek ihtiyacı ve eğitim süresi birlikte değerlendirilmelidir.
+
+SINIRLAR
+Derin öğrenme örüntülerden tahmin üretir; tek başına doğruluk veya sağduyu garantisi vermez. Eğitim verisindeki yanlılıklar ve eksikler çıktılara yansıyabilir.

@@ -1,0 +1,26 @@
+# Secrets — never commit API keys or local environment
+.env
+.env.*
+!.env.example
+groq_api_key.txt
+grok_api_key.txt
+*api_key*.txt
+*token*.txt
+secrets/
+credentials/
+
+# Local runtime data, caches and logs
+__pycache__/
+*.py[cod]
+*.log
+datadev_cluster/
+datadev_cluster_model_version.txt
+datadev_api_requests.jsonl
+datadev_api_errors.log
+*_previous.log
+*.tmp
+*.sync-tmp
+
+# Local backups of code/model files
+*.bak
+*.before_*

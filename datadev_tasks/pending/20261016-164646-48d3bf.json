@@ -1,0 +1,10 @@
+{
+  "task_id": "20261016-164646-48d3bf",
+  "task_type": "qa_generation",
+  "topic": "SQL ve veritabanları",
+  "preferred_worker": "kayizer-vds",
+  "expected_records": 25,
+  "instructions": "SQL ve veritabanları hakkında Türkçe soru-cevap üret.",
+  "status": "pending",
+  "created_at": "2026-10-16T13:46:46.184962+00:00"
+}

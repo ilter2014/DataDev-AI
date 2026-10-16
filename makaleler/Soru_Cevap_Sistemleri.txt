@@ -1,0 +1,24 @@
+SORU-CEVAP SİSTEMLERİ
+
+Soru-cevap sistemleri kullanıcı sorusuna uygun bir cevap üretmeyi veya kaynaklardan bulmayı hedefler. Bazı sistemler hazır kurallar, bazıları bilgi getirme, bazıları dil modeli üretimi kullanır.
+
+KURAL TABANLI YANIT
+Belirli ifadeler için önceden tanımlanmış yanıtlar hızlı ve tutarlı olabilir. Ancak kullanıcı soruyu farklı ifade ettiğinde kural çalışmayabilir.
+
+BİLGİ GETİRME
+Sistem önce belgeler arasında soru ile ilgili metni bulur. Ardından doğrudan parçayı gösterebilir veya bu parçaya dayanarak özet oluşturabilir.
+
+ÜRETİCİ YAKLAŞIM
+Dil modeli bağlamdan yeni metin üretir. Üretim akıcı olabilir ama kaynakta bulunmayan bilgiler de ortaya çıkabilir. Bu nedenle doğrulama önemlidir.
+
+KAYNAKLI CEVAP
+Yanıtın hangi belgeye dayandığını belirtmek kullanıcının bilgiyi kontrol etmesini sağlar. Kaynak metnin gerçekten cevabı desteklediği ayrıca kontrol edilmelidir.
+
+BELİRSİZLİK
+Soru belirsizse sistem açıklama isteyebilir. Kaynaklarda yanıt yoksa bunu açıkça söylemek, uydurma bilgi vermekten daha güvenilirdir.
+
+DEĞERLENDİRME
+Yanıtlar doğruluk, alaka, tamlık, anlaşılabilirlik ve kaynak sadakati açısından incelenebilir. Test soruları farklı ifade biçimlerini içermelidir.
+
+DATADEV AI
+Mevcut DataDev AI prototipi basit kelime eşleşmesiyle makale bölümü bulur ve kullanıcı tarafından eklenen soru-cevapları kaydeder. Bu yaklaşım büyük bir dil modelinin yerine geçmez ama yerel bilgi asistanı için yararlı bir başlangıçtır.

@@ -1,0 +1,56 @@
+{
+  "project": "DataDev AI",
+  "generated_at": "2026-10-16T13:46:46.184962+00:00",
+  "tasks": [
+    {
+      "task_id": "20261016-164646-18e1c7",
+      "task_type": "qa_generation",
+      "topic": "Türkçe anlatım",
+      "preferred_worker": "github-actions",
+      "expected_records": 20,
+      "instructions": "Türkçe anlatım ve belirsizlik hakkında soru-cevap üret.",
+      "status": "pending",
+      "created_at": "2026-10-16T13:46:46.184962+00:00"
+    },
+    {
+      "task_id": "20261016-164646-3d11d0",
+      "task_type": "dataset_audit",
+      "topic": "Veri kalite denetimi",
+      "preferred_worker": "birsunucum-vds",
+      "expected_records": 0,
+      "instructions": "Veriyi değiştirmeden tekrarları ve şüpheli kayıtları raporla.",
+      "status": "pending",
+      "created_at": "2026-10-16T13:46:46.184962+00:00"
+    },
+    {
+      "task_id": "20261016-164646-48d3bf",
+      "task_type": "qa_generation",
+      "topic": "SQL ve veritabanları",
+      "preferred_worker": "kayizer-vds",
+      "expected_records": 25,
+      "instructions": "SQL ve veritabanları hakkında Türkçe soru-cevap üret.",
+      "status": "pending",
+      "created_at": "2026-10-16T13:46:46.184962+00:00"
+    },
+    {
+      "task_id": "20261016-164646-719a8f",
+      "task_type": "qa_generation",
+      "topic": "Python temelleri",
+      "preferred_worker": "colab-1",
+      "expected_records": 30,
+      "instructions": "Türkçe Python soru-cevap çiftleri üret; tekrar etme.",
+      "status": "pending",
+      "created_at": "2026-10-16T13:46:46.184962+00:00"
+    },
+    {
+      "task_id": "20261016-164646-a43a74",
+      "task_type": "qa_generation",
+      "topic": "Minecraft Paper ve Skript",
+      "preferred_worker": "colab-2",
+      "expected_records": 25,
+      "instructions": "Paper 1.21.x ve Skript hakkında Türkçe soru-cevap üret; emin olmadığını uydurma.",
+      "status": "pending",
+      "created_at": "2026-10-16T13:46:46.184962+00:00"
+    }
+  ]
+}

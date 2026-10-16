@@ -1,0 +1,21 @@
+BİLGİSAYAR AĞLARI VE İNTERNET
+
+Bilgisayar ağı, cihazların veri alışverişi yapabilmesini sağlar. Yerel ağlar ev veya ofis gibi sınırlı alanlarda; internet ise çok sayıda ağı birbirine bağlayan küresel sistem olarak çalışır.
+
+IP ADRESİ
+IP adresi, ağ üzerinde bir arayüzü adreslemek için kullanılır. IPv4 ve IPv6 farklı adresleme biçimleridir. Özel ağ adresleri çoğunlukla yerel ağlarda kullanılır.
+
+DNS
+DNS, alan adlarını IP adresleri gibi kayıtlara çözümlemeye yardımcı olur. DNS sorunu olduğunda internet bağlantısı var gibi görünse bile alan adları açılamayabilir.
+
+TCP VE UDP
+TCP bağlantı odaklı, sıralı ve güvenilir veri aktarımı sağlar. UDP daha az protokol yüküyle datagram aktarır; uygulamanın ihtiyacına göre tercih edilir.
+
+HTTP VE HTTPS
+HTTP web istekleri için kullanılır. HTTPS, HTTP iletişimini TLS ile şifreleyerek aktarım gizliliği ve sunucu kimliğinin doğrulanması için koruma sağlar.
+
+GECİKME VE BANT GENİŞLİĞİ
+Gecikme, verinin gidip gelmesi için gereken süreyle ilgilidir. Bant genişliği birim zamanda aktarılabilecek veri miktarını ifade eder. Oyunlarda düşük gecikme özellikle önemlidir.
+
+GÜVENLİK
+Güçlü Wi-Fi parolası, güncel yönlendirici yazılımı ve gereksiz açık servisleri kapatmak ağ güvenliğine yardımcı olur.

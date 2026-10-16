@@ -1,0 +1,24 @@
+API VE WEB UYGULAMALARI
+
+API, yazılım bileşenlerinin birbirleriyle belirli bir sözleşme üzerinden iletişim kurmasını sağlar. Web API'leri çoğunlukla HTTP istekleri ve JSON yanıtları kullanır.
+
+İSTEK VE YANIT
+Bir HTTP isteği yöntem, yol, başlıklar ve isteğe bağlı gövde içerebilir. Yanıt durum kodu, başlıklar ve içerik döndürür. Hata yanıtları istemcinin sorunu anlamasına yardımcı olmalıdır.
+
+REST
+REST, kaynaklar ve standart HTTP yöntemleri üzerinden API tasarımında sık kullanılan bir yaklaşımdır. Bir API'nin REST olarak adlandırılması için yalnızca JSON döndürmesi yeterli değildir; tasarım ilkeleri önemlidir.
+
+KİMLİK DOĞRULAMA VE YETKİ
+Kimlik doğrulama, kullanıcının kim olduğunu doğrular. Yetkilendirme, kullanıcının hangi işlemleri yapabileceğini belirler. Giriş yapmış olmak her kaynağa erişim hakkı vermez.
+
+HIZ SINIRLAMA
+Rate limiting, belirli sürede yapılabilecek istekleri sınırlar. Aşırı kullanım ve hizmet kesintisi riskini azaltabilir.
+
+HATA YÖNETİMİ
+API'ler anlaşılır durum kodları ve hata mesajları döndürmelidir. İstemci, ağ hataları ve geçici servis sorunları için dikkatli yeniden deneme yapabilir.
+
+GİZLİ ANAHTARLAR
+API anahtarları kaynak kodunda paylaşılmamalıdır. Ortam değişkenleri ve güvenli sır yönetimi tercih edilmelidir.
+
+TEST
+API'ler başarılı istekler, yetkisiz istekler, eksik alanlar, bozuk JSON ve beklenmeyen girdilerle test edilmelidir.

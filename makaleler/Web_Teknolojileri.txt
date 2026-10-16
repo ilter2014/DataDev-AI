@@ -1,0 +1,27 @@
+WEB TEKNOLOJİLERİNE GİRİŞ
+
+Web uygulamaları tarayıcı, sunucu ve ağ protokollerinin birlikte çalışmasıyla hizmet verir. Tarayıcı kullanıcı arayüzünü gösterir; sunucu istekleri işler ve gerekirse veri tabanıyla iletişim kurar.
+
+HTML
+HTML sayfanın yapısını tanımlar. Başlıklar, paragraflar, bağlantılar, formlar ve görseller HTML öğeleriyle temsil edilir. Anlamlı HTML kullanmak erişilebilirliği ve bakım kolaylığını artırır.
+
+CSS
+CSS, sayfanın görünümünü düzenler. Renk, yazı tipi, boşluk, hizalama ve farklı ekran boyutlarına uyum gibi özellikler CSS ile yönetilir.
+
+JAVASCRIPT
+JavaScript tarayıcıda etkileşim ve dinamik davranış sağlar. Form doğrulama, menüler ve arayüz güncellemeleri yaygın kullanım alanlarıdır. Sunucu tarafında da JavaScript çalıştırılabilir.
+
+HTTP
+HTTP, istemci ve sunucu arasında istek ve yanıtların aktarılmasını sağlar. GET genellikle veri almak, POST ise veri göndermek için kullanılır. Durum kodları isteğin sonucunu açıklamaya yardımcı olur.
+
+API
+API, yazılım bileşenlerinin belirli kurallarla iletişim kurmasını sağlayan arayüzdür. Bir uygulama JSON biçiminde veri sunabilir ve başka bir uygulama bu veriyi kullanabilir.
+
+VERİ TABANI
+Veri tabanları bilgileri yapılandırılmış biçimde saklar. İlişkisel veri tabanları tablolar ve SQL sorguları kullanır. Veri modeli, indeksler ve erişim kuralları performans ile güvenliği etkiler.
+
+GÜVENLİK
+Sunucu gelen girdileri doğrulamalı, kimlik doğrulama ve yetkilendirme uygulamalı, gizli bilgileri korumalıdır. İstemci tarafında yapılan doğrulama tek başına yeterli değildir.
+
+DATADEV AI İÇİN
+CMD prototipi yerel bir Python programıdır ve web uygulaması değildir. İleride web arayüzü eklenirse kullanıcı arayüzü, sunucu mantığı ve veri saklama katmanları ayrı tasarlanabilir.

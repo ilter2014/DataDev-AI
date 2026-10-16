@@ -1,0 +1,21 @@
+İŞLETİM SİSTEMLERİ
+
+İşletim sistemi, uygulamalar ile donanım arasında kaynak yönetimi ve ortak hizmetler sağlayan temel yazılımdır. Windows, Linux, macOS, Android ve iOS farklı işletim sistemi örnekleridir.
+
+SÜREÇ VE İŞ PARÇACIĞI
+Süreç, çalışan bir programın işletim sistemi tarafından yönetilen örneğidir. İş parçacıkları bir süreç içinde yürütme akışları oluşturabilir. İşletim sistemi CPU zamanını bu yürütmelere paylaştırır.
+
+DOSYA SİSTEMİ
+Dosya sistemi dosyaların ve klasörlerin depolamada nasıl düzenlendiğini belirler. Dosya izinleri hangi kullanıcıların okuyabileceğini, yazabileceğini veya çalıştırabileceğini sınırlar.
+
+BELLEK YÖNETİMİ
+İşletim sistemi uygulamalara bellek alanı sağlar ve süreçlerin bellek erişimini yönetir. Sanal bellek, fiziksel RAM ile disk tabanlı destek mekanizmalarını birlikte kullanabilir.
+
+SÜRÜCÜLER
+Aygıt sürücüleri işletim sisteminin donanımla iletişim kurmasına yardımcı olur. Uyumsuz veya eski sürücüler kararlılık ve performans sorunlarına neden olabilir.
+
+KOMUT SATIRI
+Komut satırı, dosya işlemleri ve program çalıştırma gibi işleri metin komutlarıyla yapmayı sağlar. Komutlar işletim sistemine göre değişebilir.
+
+GÜNCELLEME VE YEDEK
+Güvenlik güncellemeleri bilinen açıkları kapatabilir. Önemli dosyaların ayrı yerde yedeklenmesi sistem arızalarına karşı koruma sağlar.

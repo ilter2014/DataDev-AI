@@ -1,0 +1,27 @@
+DATADEV AI GELİŞTİRME YOL HARİTASI
+
+Bir yapay zekâ projesi, hedefleri küçük ve ölçülebilir aşamalara ayırarak geliştirilebilir. Her aşamada çalışan bir sürüm ve test edilebilir bir sonuç bulunması hata ayıklamayı kolaylaştırır.
+
+AŞAMA 1: YEREL BİLGİ ASİSTANI
+Metin dosyalarını okumak, paragrafları aramak, kaynak göstermek ve bilinmeyen sorularda bunu açıkça belirtmek temel işlevlerdir.
+
+AŞAMA 2: KULLANICI TARAFINDAN ÖĞRETİLEN CEVAPLAR
+Kullanıcı soru ve cevap ekleyebilir. Bu kayıtlar dosyada kalıcı tutulur. Benzer sorular eşleştirilirken yanlış eşleşme riski test edilmelidir.
+
+AŞAMA 3: DAHA İYİ ARAMA
+Kelime örtüşmesi yerine TF-IDF, yazım düzeltme veya anlamsal vektör araması denenebilir. Her yöntemin performansı aynı test sorularıyla karşılaştırılmalıdır.
+
+AŞAMA 4: SOHBET BAĞLAMI
+Son konuşma mesajları geçici bağlam olarak kullanılabilir. Kişisel bilgileri kalıcı saklamadan önce açık kontrol ve silme seçenekleri tasarlanmalıdır.
+
+AŞAMA 5: GERÇEK MODEL EĞİTİMİ
+Bir dil modelini eğitmek için temiz eğitim verisi, tokenizasyon, kayıp hesabı, optimizasyon, değerlendirme ve hesaplama kaynağı gerekir. Birkaç makale eklemek tek başına güçlü bir dil modeli oluşturmaz.
+
+AŞAMA 6: TEST VE GÜVENİLİRLİK
+Doğru yanıtlar, kaynak doğruluğu, yanlış cevaplar ve performans ölçülmelidir. Yeni sürüm önceki sürümle aynı test setinde karşılaştırılmalıdır.
+
+AŞAMA 7: ARAYÜZ VE PAYLAŞIM
+CMD prototipi kararlı hâle geldikten sonra grafik arayüz veya yerel web arayüzü yapılabilir. Uygulama başkalarıyla paylaşılacaksa kurulum, güvenlik ve lisanslar belgelenmelidir.
+
+ÖLÇÜLEBİLİR HEDEFLER
+Her aşama için örnek görevler ve başarı ölçütleri belirlemek ilerlemeyi görünür kılar. Modelin yalnızca güzel cümle kurması değil, doğru bilgi bulması ve belirsizliğini açıklaması da önemlidir.

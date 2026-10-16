@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Sınır Bölgesindeki Ev",
+    "author": "William Hope Hodgson",
+    "gutenberg_id": "PG10002",
+    "source": "https://www.gutenberg.org/ebooks/10002",
+    "file": "AKTA_PG10002_Sınır_Bölgesindeki_Ev.txt",
+    "characters": 263084,
+    "archive": "https://github.com/ahmetax/akta"
+  },
+  {
+    "title": "Alice Harikalar Diyarında",
+    "author": "J.C. Gorham",
+    "gutenberg_id": "PG19551",
+    "source": "https://www.gutenberg.org/ebooks/19551",
+    "file": "AKTA_PG19551_Alice_Harikalar_Diyarında.txt",
+    "characters": 92146,
+    "archive": "https://github.com/ahmetax/akta"
+  },
+  {
+    "title": "Sherlock Holmes'un Dönüşü",
+    "author": "Arthur Conan Doyle",
+    "gutenberg_id": "PG221",
+    "source": "https://www.gutenberg.org/ebooks/221",
+    "file": "AKTA_PG221_Sherlock_Holmes_un_Dönüşü.txt",
+    "characters": 561888,
+    "archive": "https://github.com/ahmetax/akta"
+  }
+]

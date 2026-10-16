@@ -1,0 +1,24 @@
+VERİ TABANLARINA GİRİŞ
+
+Veri tabanı, bilgileri düzenli biçimde saklamak, aramak ve güncellemek için kullanılan sistemdir. Küçük projelerde dosyalar yeterli olabilir; birden fazla kullanıcının veri paylaştığı projelerde veri tabanı daha uygun olabilir.
+
+İLİŞKİSEL MODEL
+İlişkisel veri tabanında veriler tablolarda tutulur. Satırlar kayıtları, sütunlar alanları temsil eder. Birincil anahtar her kaydı tanımlar; yabancı anahtar tablolar arasında ilişki kurabilir.
+
+SQL
+SQL, ilişkisel veri tabanlarıyla çalışmak için kullanılan sorgulama dilidir. SELECT veriyi okur, INSERT kayıt ekler, UPDATE kayıt değiştirir ve DELETE kayıt siler. Değişikliklerden önce hangi kayıtların etkileneceği kontrol edilmelidir.
+
+İNDEKS
+İndeks belirli aramaları hızlandırabilir, fakat ek depolama alanı kullanır ve yazma işlemlerine maliyet ekleyebilir. İndeksler sorgu örüntülerine göre seçilmelidir.
+
+İŞLEMLER
+Veri tabanı işlemleri birden fazla değişikliği tek bir mantıksal birim olarak ele alabilir. İşlemler tutarlılığı korumaya yardımcı olur; hata olduğunda geri alma gerekebilir.
+
+SQLITE
+SQLite, ayrı bir veri tabanı sunucusu gerektirmeyen dosya tabanlı bir ilişkisel veri tabanıdır. Yerel masaüstü uygulamaları ve prototipler için kullanışlıdır.
+
+JSON VE VERİ TABANI KARŞILAŞTIRMASI
+JSON dosyası küçük ayarlar ve basit kayıtlar için kolaydır. Çok sayıda kayıt, eş zamanlı erişim, sorgulama ve tutarlılık ihtiyaçları arttığında veri tabanı daha iyi bir seçenek olabilir.
+
+GÜVENLİK
+Kullanıcı girdilerini sorgu metnine doğrudan birleştirmek enjeksiyon riskine yol açabilir. Parametreli sorgular kullanılmalı, dosya izinleri ve yedekler doğru yönetilmelidir.

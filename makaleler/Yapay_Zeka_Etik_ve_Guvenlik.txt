@@ -1,0 +1,15 @@
+YAPAY ZEKÂ ETİĞİ VE GÜVENLİK
+
+Yapay zekâ sistemleri insanlara yardımcı olabilir, ancak yanlış sonuçlar veya beklenmeyen davranışlar da üretebilir. Tasarım sırasında doğruluk, güvenlik, gizlilik, adalet ve hesap verebilirlik dikkate alınmalıdır.
+
+YANLIŞ BİLGİ
+Bir model akıcı görünen ama hatalı cevap üretebilir. Önemli kararlar için cevaplar güvenilir kaynaklarla doğrulanmalıdır. Model emin değilse belirsizliğini belirtmelidir.
+
+ÖNYARGI
+Eğitim verisi bazı grupları veya bakış açılarını eksik temsil edebilir. Bu durum model çıktılarında adaletsiz sonuçlara yol açabilir. Veri çeşitliliği, testler ve etki değerlendirmesi sorunları ortaya çıkarmaya yardımcı olur.
+
+GİZLİLİK
+Kişisel ve hassas veriler yalnızca gerekli ve uygun izinler çerçevesinde işlenmelidir. Gizli bilgiler eğitim dosyalarına gelişigüzel eklenmemelidir. Kullanıcıların hangi verilerin kaydedildiğini bilmesi önemlidir.
+
+GÜVENLİ TASARIM
+Sistemler hata durumlarını ele almalı, kullanıcı girdilerini doğrulamalı ve gereksiz yetkilere sahip olmamalıdır. Önemli sonuçlar doğurabilecek işlerde insan değerlendirmesi gerekli olabilir.

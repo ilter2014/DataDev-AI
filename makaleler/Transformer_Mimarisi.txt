@@ -1,0 +1,27 @@
+TRANSFORMER MİMARİSİNE GİRİŞ
+
+Transformer, dizilerdeki öğeler arasındaki ilişkileri attention mekanizmasıyla hesaplayan bir sinir ağı mimarisidir. Dil modellerinde uzun bağlam ilişkilerini işlemek için yaygın olarak kullanılır.
+
+ATTENTION NEDİR?
+Attention, bir konumdaki temsilin diğer konumlardan hangi bilgileri kullanacağını ağırlıklandırır. Query, key ve value adı verilen vektörler arasındaki benzerliklerden ağırlıklar hesaplanır. Bu ağırlıklarla value vektörleri birleştirilir.
+
+ÇOKLU DİKKAT
+Multi-head attention aynı girdiye farklı öğrenilebilir dönüşümler uygular. Farklı başlıklar farklı ilişki türlerini yakalayabilir. Başlıkların her zaman insan tarafından kolay yorumlanabilir olduğu varsayılmamalıdır.
+
+KONUM BİLGİSİ
+Attention işlemi tek başına sıralamayı doğal olarak bilmez. Bu nedenle transformer mimarileri tokenların konumuna ilişkin bilgi ekler. Konumsal temsillerin farklı türleri bulunur.
+
+ENCODER VE DECODER
+Encoder tabanlı mimariler girdiyi temsil etmekte, decoder tabanlı mimariler ise önceki tokenlardan sonraki tokenı üretmekte kullanılır. Encoder-decoder yapıları girdi dizisinden çıktı dizisine dönüşüm görevlerinde yararlı olabilir.
+
+NEDENSEL MASKE
+Metin üreten decoder modellerinde nedensel maske, modelin sonraki tokenları görmesini engeller. Böylece her konum yalnızca kendisinden önceki bağlamı kullanarak tahmin yapar.
+
+EĞİTİM HEDEFİ
+Birçok dil modeli, metin dizilerinde sonraki tokenı tahmin ederek eğitilir. Bu eğitim dili taklit etme ve örüntü öğrenme yeteneği kazandırabilir; ancak her üretilen bilginin doğru olduğu anlamına gelmez.
+
+HESAPLAMA MALİYETİ
+Attention hesaplamasının maliyeti bağlam uzunluğuyla büyüyebilir. Uzun diziler daha fazla bellek ve hesaplama gerektirir. Bu nedenle model boyutu, bağlam uzunluğu ve donanım kapasitesi birlikte düşünülmelidir.
+
+DATADEV AI İÇİN ANLAMI
+Mevcut küçük karakter modeli transformer değildir. Transformer kullanmak daha fazla veri, eğitim kodu, hesaplama ve doğru değerlendirme gerektirir. Mimariyi büyütmek tek başına kaliteli sohbet garantisi sağlamaz.

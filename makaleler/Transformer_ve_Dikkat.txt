@@ -1,0 +1,15 @@
+TRANSFORMER MİMARİSİ VE DİKKAT
+
+Transformer, dizilerdeki öğelerin ilişkilerini dikkat mekanizması üzerinden hesaplayan bir sinir ağı mimarisidir. Modern dil modellerinin çoğunda transformer benzeri yapılar kullanılır.
+
+DİKKAT MEKANİZMASI
+Dikkat mekanizması, bir tokenın temsilini hesaplarken bağlamdaki diğer tokenlara farklı ağırlıklar verir. Query, key ve value olarak adlandırılan öğrenilmiş temsiller dikkat ağırlıklarının hesaplanmasında kullanılır.
+
+ÇOKLU DİKKAT VE KONUM
+Çoklu dikkat, birden fazla dikkat başlığının farklı ilişki örüntülerini öğrenmesine imkân verir. Dizilerde token sırası önemli olduğu için transformer mimarileri konum bilgisini de temsil eder.
+
+DİL MODELİ EĞİTİMİ
+Bir sonraki token tahmini yapan dil modeli, önceki tokenlardan sonraki tokenı tahmin etmeye çalışır. Tahmin ile gerçek token arasındaki kayıp, model parametrelerini güncellemek için kullanılır. Bu yöntem dil örüntülerini öğrenebilir ancak her cümlenin doğru olduğunu garanti etmez.
+
+BAĞLAM VE HESAPLAMA
+Modelin aynı anda işleyebildiği metin miktarı bağlam penceresiyle sınırlıdır. Dizi uzadıkça dikkat hesaplamasının maliyeti artabilir. Uzun bağlam tek başına doğru akıl yürütmeyi garanti etmez.

@@ -1,0 +1,24 @@
+DATADEV GPT LOSS ANALİZİ
+
+Grafik: datadev_gpt_loss_grafik.svg
+Ölçüm sayısı: 41 (her 30 adımda bir; her eğitim adımının kaydı değil)
+
+Başlangıçtaki ilk 4 ölçüm ortalaması:
+- Eğitim loss: 3.448
+- Doğrulama loss: 3.509
+
+Son 4 ölçüm ortalaması:
+- Eğitim loss: 1.812
+- Doğrulama loss: 1.786
+
+Son 10 ölçüm doğrulama ortalaması: 1.786
+Önceki 10 ölçüm doğrulama ortalaması: 1.953
+En düşük tek doğrulama ölçümü: 1.492 (adım 1170)
+Son kayıtta eğitim/doğrulama loss: 1.963 / 1.845
+
+YORUM:
+- Genel yön aşağı: model eğitim sırasında örüntü öğrenmiş.
+- Ölçümler dalgalı; son ölçüm tek başına düzlüğe ulaşıldığını veya geçildiğini kanıtlamaz.
+- Doğrulama loss'unu tek ölçüm yerine hareketli ortalamayla izlemek daha anlamlı.
+- Bu küçük karakter-seviyeli modelin loss'u düşse bile anlaşılır Türkçe üreteceği garanti değil.
+- Mevcut log, 1200 adımdan sonra eğitim sürdürülürse ne olacağını göstermez; bunu öğrenmek için kontrollü devam eğitimi ve aynı doğrulama seti gerekir.

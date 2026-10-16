@@ -1,0 +1,21 @@
+GIT VE SÜRÜM KONTROLÜ
+
+Sürüm kontrolü, dosyalarda zaman içinde yapılan değişiklikleri takip eder. Git, yazılım projelerinde yaygın olarak kullanılan dağıtık bir sürüm kontrol sistemidir.
+
+DEPO
+Git deposu, proje geçmişini ve sürüm bilgilerini tutar. Depoda kaynak kodu, belgeler ve uygun yapılandırma dosyaları bulunabilir.
+
+COMMIT
+Commit, belirli bir değişiklik kümesinin geçmişe kaydedilmesidir. Açıklayıcı commit mesajları, hangi değişikliğin neden yapıldığını anlamayı kolaylaştırır.
+
+BRANCH
+Branch, ana geliştirme geçmişinden ayrılan çalışma çizgisidir. Yeni bir özelliği ayrı dalda geliştirmek, ana sürümü bozmadan deneme yapmaya yardımcı olabilir.
+
+DIFF
+Diff, iki sürüm arasındaki satır değişikliklerini gösterir. Değişiklikleri commit etmeden önce diff incelemek, yanlışlıkla eklenen dosyaları veya gizli bilgileri fark etmeyi sağlar.
+
+YEDEK VE GİZLİ BİLGİLER
+Sürüm kontrolü tek başına yedekleme stratejisinin tamamı değildir. Parolalar, API anahtarları ve kişisel veriler depoya eklenmemelidir. Gizli bilgiler yanlışlıkla eklenirse yalnızca dosyayı silmek geçmişten kaldırmaya yetmeyebilir.
+
+DATADEV AI İÇİN
+Her çalışan sürümden önce dosyaların yedeğini almak yararlıdır. Kod değişiklikleri küçük parçalara ayrılmalı ve her değişiklikten sonra sözdizimi ve işlev testleri çalıştırılmalıdır.

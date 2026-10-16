@@ -1,0 +1,21 @@
+TÜRKÇE METİN İŞLEME
+
+Türkçe metin işleme, Türkçenin yazım ve dil özelliklerini dikkate almalıdır. Basit normalleştirme arama kalitesini artırabilir, fakat bazı bilgileri kaybetme riski vardır.
+
+I VE İ HARFLERİ
+Türkçede büyük I harfinin küçük karşılığı ı, büyük İ harfinin küçük karşılığı i şeklindedir. İngilizce odaklı basit küçük harfe çevirme işlemleri Türkçe kelimeleri yanlış dönüştürebilir.
+
+EKLEMELİ DİL
+Türkçede köklere çok sayıda ek eklenebilir. Aynı kökün farklı biçimleri ayrı kelimeler gibi görünebilir. Kök bulma veya alt kelime tokenizasyonu bu sorunu azaltmaya yardımcı olabilir.
+
+YAZIM HATALARI
+Kullanıcılar hızlı yazarken harf atlayabilir veya karakterleri değiştirebilir. Yazım toleranslı arama benzer kelimeleri bulabilir, ancak fazla tolerans alakasız sonuçlar da üretebilir.
+
+NOKTALAMA
+Noktalama işaretleri cümle sınırlarını ve anlamı etkileyebilir. Arama sırasında bazı noktalama işaretleri kaldırılabilir; dil üretiminde ise doğru noktalama önemlidir.
+
+UNICODE
+Unicode farklı dillerdeki karakterleri temsil etmek için kullanılır. Dosyaları UTF-8 olarak okumak ve yazmak Türkçe karakterlerin korunmasına yardımcı olur.
+
+ARAMA İÇİN NORMALLEŞTİRME
+Sorgu ve belge aynı normalleştirme yönteminden geçirilirse harf farklılıkları daha az sorun yaratır. Orijinal metni ayrıca saklamak, kullanıcıya düzgün Türkçe yanıt göstermek için önemlidir.

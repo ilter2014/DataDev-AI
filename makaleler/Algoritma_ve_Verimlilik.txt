@@ -1,0 +1,21 @@
+ALGORİTMA TASARIMI VE VERİMLİLİK
+
+Bir algoritma problemi çözmek için sonlu ve açık adımlar tanımlar. Algoritma tasarlarken doğruluk, okunabilirlik, zaman maliyeti ve bellek kullanımı dikkate alınır.
+
+BÖL VE YÖNET
+Böl ve yönet yaklaşımı problemi daha küçük alt problemlere ayırır, alt çözümleri hesaplar ve sonuçları birleştirir. Birçok sıralama ve arama algoritması bu fikirden yararlanır.
+
+AÇGÖZLÜ YÖNTEM
+Açgözlü algoritma her adımda o an için en iyi görünen seçimi yapar. Bazı problemlerde doğru ve verimlidir; fakat her problemde küresel optimumu bulduğu varsayılamaz.
+
+DİNAMİK PROGRAMLAMA
+Dinamik programlama, tekrar eden alt problemleri hesaplayıp sonuçlarını saklayarak gereksiz hesaplamayı azaltır. Alt problemlerin yapısı ve sonuçların nasıl birleştirileceği dikkatle tanımlanmalıdır.
+
+ÖNBELLEKLEME
+Memoization, bir fonksiyonun daha önce hesaplanan sonuçlarını saklayabilir. Aynı girdiler tekrarlandığında hesaplamayı azaltır, ancak ek bellek kullanır.
+
+KARMAŞIKLIK
+Big O notasyonu girdi boyutu büyüdükçe kaynak kullanımının nasıl arttığını yaklaşık olarak ifade eder. Sabit katsayıları ve küçük terimleri genellikle ihmal eder.
+
+ÖLÇÜM
+Teorik karmaşıklık ile gerçek çalışma süresi farklı olabilir. Performans ölçümü temsil edici veride yapılmalı; doğruluk ve okunabilirlik de göz ardı edilmemelidir.

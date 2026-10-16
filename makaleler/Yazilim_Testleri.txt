@@ -1,0 +1,24 @@
+YAZILIM TESTİ VE HATA AYIKLAMA
+
+Yazılım testi, programın beklenen davranışı gösterip göstermediğini kontrol eder. Testler hataları bulmaya yardımcı olur; ancak hiçbir test tüm hataların yokluğunu kanıtlamaz.
+
+BİRİM TESTİ
+Birim testleri küçük bir fonksiyon veya bileşeni izole biçimde kontrol eder. Hataların hangi bölümde oluştuğunu anlamayı kolaylaştırır.
+
+ENTEGRASYON TESTİ
+Entegrasyon testleri bileşenlerin birlikte doğru çalışıp çalışmadığını inceler. Örneğin sohbet uygulamasının makale dosyalarını okuyup kaynak göstermesi test edilebilir.
+
+UÇTAN UCA TEST
+Uçtan uca test, kullanıcının gerçek kullanım akışını baştan sona dener. Girdi, yanıt, hata yönetimi ve çıkış davranışı bu kapsama girebilir.
+
+SINIR DURUMLARI
+Boş girdi, çok uzun metin, Türkçe karakterler, eksik dosya, bozuk JSON ve bulunmayan klasörler test edilmelidir.
+
+REGRESYON
+Bir değişiklik daha önce çalışan işlevleri bozabilir. Regresyon testleri önceki önemli senaryoları her sürümde yeniden çalıştırır.
+
+HATA AYIKLAMA
+Hata mesajı, satır numarası ve günlükler incelenir. Sorun küçük bir örnekle yeniden oluşturulabiliyorsa çözüm bulmak kolaylaşır.
+
+DATADEV AI İÇİN TEST
+Önce python -m py_compile ile sözdizimi kontrolü yapılabilir. Ardından bilinen makale soruları, bilinmeyen sorular, /yenile ve /cikis komutları denenmelidir.

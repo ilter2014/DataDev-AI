@@ -1,0 +1,24 @@
+BİLGİ GETİRME SİSTEMLERİ VE YEREL MAKALE ARAMASI
+
+Bilgi getirme, bir sorguya uygun belgeleri veya belge parçalarını bulma problemidir. Arama motorları, yardım merkezleri ve doküman asistanları bu yaklaşımı kullanabilir.
+
+BELGE PARÇALAMA
+Uzun belgeler daha küçük paragraflara ayrılabilir. Çok büyük parçalar farklı konuları bir arada tutabilir; çok küçük parçalar ise gerekli bağlamı kaybedebilir. Bölüm başlıklarını parçalarla birlikte saklamak yararlıdır.
+
+ANAHTAR KELİME ARAMASI
+Basit sistemler sorgu ile belge arasındaki ortak kelimeleri sayabilir. Bu yöntem hızlı ve açıklanabilirdir, fakat eş anlamlı kelimeleri ve aynı kavramın farklı ifadelerini kaçırabilir.
+
+TF-IDF
+TF-IDF, bir kelimenin belgede ne kadar belirgin olduğunu ve tüm koleksiyonda ne kadar yaygın olduğunu dikkate alan bir ağırlıklandırma yöntemidir. Çok yaygın kelimelerin etkisini azaltmaya yardımcı olur.
+
+ANLAMSAL ARAMA
+Anlamsal arama, sorgu ve belgeyi vektör temsillerine dönüştürerek anlam bakımından yakın parçaları bulmaya çalışır. Bunun için uygun bir gömme modeli ve bazen vektör indeksi gerekir.
+
+GETİRİLEN METİNDEN YANIT
+Bir sistem önce ilgili paragrafları bulup sonra bunlara dayanarak yanıt oluşturabilir. Bu yaklaşım yanıtın kaynağını göstermeyi kolaylaştırır. Ancak getirilen metin eksik veya yanlışsa cevap da eksik olabilir.
+
+KAYNAK GÖSTERME
+Her paragrafın dosya adı ve başlığını saklamak, kullanıcıya bilginin nereden geldiğini gösterir. Kaynak göstermek doğruluğu otomatik garanti etmez; kaynak metnin gerçekten iddiayı desteklemesi gerekir.
+
+DATADEV AI'NİN YÖNTEMİ
+DataDev AI'nin mevcut sürümü yerel .txt makalelerini paragraflara ayırır ve sorgudaki kelimelerle örtüşmeye bakar. Bu, makalelerden bilgi getirmedir; sinir ağı modelini yeniden eğitmek değildir. Daha sonra TF-IDF veya anlamsal arama eklenebilir.

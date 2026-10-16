@@ -1,0 +1,14 @@
+PYTHON NEDİR?
+Python, okunabilir sözdizimiyle bilinen genel amaçlı bir programlama dilidir. Otomasyon, web uygulamaları, veri analizi ve yapay zekâ projelerinde kullanılır. Python dosyaları genellikle .py uzantılıdır.
+
+DEĞİŞKENLER VE VERİ TİPLERİ
+Değişkenler değerleri isimlerle saklamaya yarar. Örneğin isim = "DataDev AI" bir metin, sayi = 10 bir tam sayı değeridir. Liste birden fazla öğeyi sıralı tutabilir. Sözlük anahtar-değer çiftleri saklar.
+
+KOŞULLAR VE DÖNGÜLER
+if koşulu, kodun bir şart sağlandığında çalışmasını sağlar. for ve while döngüleri bir işlemi tekrarlar. Fonksiyonlar, tekrar kullanılabilen kod parçalarıdır ve def anahtar sözcüğüyle tanımlanır.
+
+HATA AYIKLAMA
+Hata mesajındaki dosya adı ve satır numarası sorunun yerini bulmaya yardım eder. SyntaxError sözdizimi hatası, ModuleNotFoundError ise genellikle gereken paketin veya modülün bulunamadığını belirtir. Kod değiştirildikten sonra küçük bir test çalıştırmak hataları erken yakalar.
+
+PYTHON PROJESİNİ ÇALIŞTIRMA
+Windows CMD içinde cd komutuyla proje klasörüne gidilir. Ardından python dosya_adi.py komutu çalıştırılır. Python ve gerekli paketler kurulu olmalıdır. Bir .bat dosyası bu komutları çift tıklamayla çalıştırmayı kolaylaştırabilir.

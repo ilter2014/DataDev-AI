@@ -1,0 +1,15 @@
+MAKİNE ÖĞRENMESİ İÇİN MATEMATİK
+
+Lineer cebir, kalkülüs, olasılık ve istatistik makine öğrenmesinin temel matematik alanlarıdır. Temel kavramlar model davranışını anlamayı kolaylaştırır.
+
+VEKTÖR
+Vektör, sıralı sayısal bileşenlerden oluşur. Bir metin gömmesi, kelime veya tokenı sayısal vektörle temsil edebilir. Vektör boyutu temsilin kaç bileşeni olduğunu belirtir.
+
+MATRİS ÇARPIMI
+Sinir ağlarında ağırlık matrisleri girdilerle çarpılarak dönüşümler hesaplanır. Matris boyutlarının uyumlu olması gerekir. Yanlış boyutlar çalışma zamanı hatasına neden olabilir.
+
+TÜREV VE GRADYAN
+Türev, bir fonksiyonun girdisi değiştiğinde çıktısının nasıl değiştiğini ifade eder. Gradyan çok değişkenli fonksiyonun parametrelere göre türevlerini içerir. Eğitimde kaybın gradyanı ağırlık güncellemelerini yönlendirir.
+
+OLASILIK VE OPTİMİZASYON
+Softmax, sınıf skorlarını normalize ederek toplamı bir olan değerler üretebilir. Gradyan inişi parametreleri kaybı azaltacak yönde günceller. Adam gibi algoritmalar gradyan geçmişini kullanarak adımları uyarlayabilir.

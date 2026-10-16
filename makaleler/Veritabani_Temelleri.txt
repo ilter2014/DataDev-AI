@@ -1,0 +1,12 @@
+VERİTABANI TEMELLERİ
+
+Veritabanı, yapılandırılmış bilgileri saklama, sorgulama ve güncelleme sistemidir. Uygulamalar kullanıcıları, mesajları, ürünleri veya öğrenilen soru-cevap kayıtlarını veritabanında tutabilir.
+
+TABLOLAR VE ANAHTARLAR
+İlişkisel veritabanında tablo kayıtları satır ve sütunlarla saklar. Birincil anahtar her kaydı benzersiz tanımlar. Yabancı anahtar tablolar arasındaki ilişkiyi ifade eder.
+
+SQL
+SQL, ilişkisel veritabanlarında veri tanımlamak ve sorgulamak için kullanılır. SELECT kayıtları okur, INSERT yeni kayıt ekler, UPDATE mevcut kayıtları değiştirir, DELETE kayıt siler. UPDATE ve DELETE sorgularında WHERE koşulunu kontrol etmek önemlidir.
+
+İŞLEMLER VE YEDEKLEME
+Veritabanı işlemleri birden fazla değişikliği tutarlı biçimde gerçekleştirmeye yardımcı olur. ACID özellikleri atomiklik, tutarlılık, yalıtım ve kalıcılığı ifade eder. Yedeklerin gerçekten geri yüklenebildiği düzenli olarak test edilmelidir.

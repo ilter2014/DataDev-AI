@@ -1,0 +1,14 @@
+YAPAY ZEKA NEDİR?
+Yapay zekâ, bilgisayarların metin anlama, örüntü bulma, tahmin yapma ve içerik üretme gibi görevleri yerine getirmesini sağlayan yöntemlerin genel adıdır. Her yapay zekâ aynı değildir; bazı sistemler kurallarla çalışır, bazıları verilerden öğrenen makine öğrenmesi modelleri kullanır.
+
+MAKİNE ÖĞRENMESİ
+Makine öğrenmesi, bir sistemin örneklerden istatistiksel ilişkiler öğrenmesidir. Eğitim sırasında modelin tahminleri hedeflerle karşılaştırılır ve parametreleri hata azalacak şekilde güncellenir. Eğitim verisinin kaliteli, çeşitli ve görevle ilgili olması önemlidir. Ezberlemek, her zaman gerçekten genelleme yapabilmek anlamına gelmez.
+
+EĞİTİM VE TEST VERİSİ
+Eğitim verisi modelin parametrelerini öğrenmek için kullanılır. Doğrulama verisi ayar seçmeye, test verisi ise daha önce görülmemiş örneklerde başarıyı ölçmeye yarar. Aynı veriyi hem eğitip hem test etmek yanıltıcı sonuç verebilir.
+
+DİL MODELLERİ NASIL ÇALIŞIR?
+Bir dil modeli, eğitiminde gördüğü örüntülerden yararlanarak sıradaki tokenı veya karakteri tahmin eder. Küçük bir karakter modeli yazım örüntülerini öğrenebilir fakat konuşmanın anlamını, gerçekleri ve uzun bağlamı iyi kavrayamayabilir. Büyük dil modellerinde çok daha fazla veri, parametre, hesaplama ve gelişmiş eğitim teknikleri kullanılır.
+
+VERİ KALİTESİ VE TELİF
+Eğitim materyalleri doğru, ilgili ve izin verilen kaynaklardan seçilmelidir. Yanlış veya çelişkili metinler modelin kalitesini düşürebilir. Bir makaleyi kaynak olarak kullanmak, modelin onu otomatik olarak tamamen doğru bildiği anlamına gelmez; yanıtların kontrol edilmesi gerekir.

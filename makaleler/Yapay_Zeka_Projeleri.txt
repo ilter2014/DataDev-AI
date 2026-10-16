@@ -1,0 +1,18 @@
+KÜÇÜK YAPAY ZEKÂ PROJESİ TASARLAMA
+
+Bir yapay zekâ projesine başlarken çözülmek istenen görev açıkça tanımlanmalıdır. Başarı ölçütü, veri kaynakları, donanım sınırları ve riskler önceden belirlenmelidir.
+
+BAŞLANGIÇ HEDEFİ
+İlk sürüm tek bir görevi güvenilir biçimde yerine getirmelidir. Yerel metin dosyalarından soruya uygun paragraf bulmak, büyük bir dil modeli eğitmekten daha küçük ve ölçülebilir bir hedeftir.
+
+VERİ KAYNAĞI
+Kullanılacak verinin kaynağı, biçimi ve izinleri kaydedilmelidir. UTF-8 metin dosyaları küçük prototiplerde kolay işlenebilir. Dosya sayısı büyüdükçe indeksleme ve arama yöntemleri geliştirilebilir.
+
+DEĞERLENDİRME
+Sistem geliştirilirken farklı yazımları, eş anlamlıları ve cevabı olmayan durumları kapsayan test soruları hazırlanabilir.
+
+GERÇEKÇİ BEKLENTİLER
+Makale arama sistemi, bulduğu metni sunabilir ama bu sinir ağının makaleler üzerinde eğitildiği anlamına gelmez. Parametre eğitimi, bilgi getirme ve hazır dil modeli kullanımı farklı yaklaşımlardır.
+
+GELİŞTİRME YOL HARİTASI
+Önce doğru dosya okuma ve kaynak gösterme sağlanır. Sonra arama kalitesi, kullanıcı tarafından öğretilebilir soru-cevaplar, testler ve konuşma geçmişi eklenebilir.

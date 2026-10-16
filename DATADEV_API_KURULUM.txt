@@ -1,0 +1,32 @@
+DATADEV AI — İLK API PROTOTİPİ
+================================
+
+Mevcut model dosyalarını ve kitap/makale kaynaklarını kullanarak basit bir JSON API açar.
+Bu, ilk geliştirme prototipidir; henüz herkese açık üretim servisi değildir.
+
+ÇALIŞTIRMA (Windows)
+--------------------
+1. Bu klasördeki DataDev AI API.bat dosyasına çift tıkla.
+2. Tarayıcıda http://127.0.0.1:8765/health adresini aç.
+3. Sağlık kontrolünde JSON yanıtı görünmelidir.
+4. Sohbet uç noktası: POST http://127.0.0.1:8765/v1/chat
+   JSON gövdesi: {"question":"Python nedir?"}
+
+PowerShell örneği:
+$body = @{ question = "Python nedir?" } | ConvertTo-Json
+Invoke-RestMethod -Uri http://127.0.0.1:8765/v1/chat -Method Post -ContentType "application/json" -Body $body
+
+GÜVENLİK
+--------
+- Varsayılan olarak yalnızca bu bilgisayarda (127.0.0.1) dinler; internetten erişilemez.
+- Dış arayüzde çalıştırmak için DATADEV_API_TOKEN ortam değişkeni (en az 32 karakter) gerekir.
+- Dışarı açmak tek başına güvenli/üretime hazır hale getirmez. Önce HTTPS reverse proxy, hesap kimliği,
+  kalıcı kota, log/mahremiyet politikası, güvenli anahtar saklama ve yük testleri eklenmelidir.
+- Sorular Groq denetimi etkinse Groq API'sine gönderilebilir. Gizli veya kişisel bilgi göndermeyin.
+- Şimdilik kullanıcı hesapları, kullanıcıların kendi Groq anahtarları, katkı cihazları ve otomatik eğitim yok.
+- API yanıtları hatalı olabilir. Model bulunamazsa 503 döner; model dosyası yokken sahte cevap üretmez.
+
+MODEL
+-----
+API, datadev_gpt_v4_model.pt dosyası varsa onu; yoksa datadev_gpt_v3_model.pt dosyasını kullanır.
+Önceki eğitim dosyaları değiştirilmez. Model ilk sohbet isteğinde belleğe yüklenir.

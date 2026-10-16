@@ -1,0 +1,21 @@
+BULUT BİLİŞİM VE SUNUCULAR
+
+Sunucu, diğer programlara veya cihazlara hizmet sağlayan bir sistemdir. Sunucu fiziksel bilgisayar, sanal makine veya yönetilen bir bulut hizmeti olabilir.
+
+VDS VE SANAL MAKİNE
+Sanal makine, fiziksel donanım üzerinde sanallaştırma katmanıyla çalışan ayrı bir işletim sistemi ortamıdır. VDS terimi sağlayıcıya göre farklı kaynak garantileriyle sunulabilir; işlemci, RAM, depolama ve ağ sınırları kontrol edilmelidir.
+
+KULLANIM ALANLARI
+Sunucular web sitesi barındırma, veri tabanı çalıştırma, oyun sunucusu, dosya hizmeti ve arka plan görevleri için kullanılabilir. Her görev farklı CPU, bellek ve ağ gereksinimleri oluşturur.
+
+DAĞITIM
+Uygulama dağıtımı, kodu hedef ortamda çalışır hâle getirme sürecidir. Bağımlılıklar, yapılandırma, günlükler, yedekler ve güncelleme yöntemi önceden planlanmalıdır.
+
+İZLEME
+CPU, RAM, disk alanı, ağ trafiği ve uygulama günlükleri sistemin durumunu anlamaya yardımcı olur. Kaynak tükenmesi kullanıcı deneyimini ve kararlılığı etkileyebilir.
+
+GÜVENLİK
+Gereksiz portlar kapatılmalı, sistem güncel tutulmalı ve yönetim erişimi korunmalıdır. Güçlü kimlik doğrulama, sınırlı yetki ve düzenli yedek önemlidir.
+
+MALİYET
+Sanal sunucu seçerken yalnızca aylık ücret değil, kaynak sınırları, trafik maliyeti, yedekleme, destek ve yenileme koşulları da değerlendirilmelidir.

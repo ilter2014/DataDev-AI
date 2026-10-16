@@ -1,0 +1,21 @@
+İSTATİSTİK VE OLASILIK TEMELLERİ
+
+İstatistik, veriyi toplama, özetleme ve yorumlama yöntemlerini inceler. Olasılık, belirsiz olayları matematiksel olarak ifade eder.
+
+ORTALAMA, ORTANCA VE TEPE DEĞER
+Aritmetik ortalama değerlerin toplamının sayıya bölünmesidir. Ortanca sıralı verinin ortasındaki değerdir. Tepe değer en sık görülen değerdir. Aykırı değerler ortalamayı ortancadan daha fazla etkileyebilir.
+
+DAĞILIM
+Varyans ve standart sapma, değerlerin ortalama çevresindeki yayılımını özetler. Büyük standart sapma genellikle daha geniş dağılıma işaret eder.
+
+KOŞULLU OLASILIK
+Koşullu olasılık, bir olay hakkında başka bir olayın gerçekleştiği bilgisi varken hesaplanan olasılıktır. Olayların bağımsız olup olmaması hesaplamayı etkiler.
+
+KORELASYON VE NEDENSELLİK
+Korelasyon iki değişkenin birlikte değişme eğilimini ölçer. Korelasyon tek başına bir değişkenin diğerine neden olduğunu kanıtlamaz.
+
+ÖRNEKLEM VE YANLILIK
+Örneklemin ana kitleyi temsil etmesi önemlidir. Seçim yanlılığı, örneklemin sistematik biçimde farklı olmasına yol açabilir.
+
+MAKİNE ÖĞRENMESİ
+İstatistiksel ölçüler veri kalitesini, model hatalarını ve tahmin belirsizliğini değerlendirmeye yardımcı olur.

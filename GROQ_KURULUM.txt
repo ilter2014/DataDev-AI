@@ -1,0 +1,13 @@
+DATADEV GPT V4 + GROQ DENETCISI KURULUMU
+
+1) https://console.groq.com/ adresinden GroqCloud hesabina gir ve bir API anahtari olustur.
+2) Anahtari DataDevAI klasorundeki groq_api_key.txt dosyasina tek satir olarak yapistir.
+3) Bu dosyayi kimseyle paylasma ve internete/GitHub'a yukleme. API anahtari gizlidir.
+4) DataDev GPT v4 - Groq.bat dosyasini calistir.
+5) DataDev once yerel taslak cevap olusturur. Groq taslagi inceler ve KEEP (bunu kullan) veya REPLACE (bunu degistir) karari verir. REPLACE ise Groq'un duzelttigi cevap gosterilir.
+
+Her soru ve DataDev'in taslak cevabi Groq API'sine gonderilir. Gizli kisisel bilgileri yazma. API kullanim limitlerini ve fiyatlandirmayi Groq panelinden kontrol et.
+
+API anahtari yoksa uygulama yalnizca yerel taslagi gosterir; Groq denetimi yapilmis gibi davranmaz.
+
+Varsayilan model: openai/gpt-oss-20b. Istersen GROQ_MODEL ortam degiskeniyle degistirebilirsin.

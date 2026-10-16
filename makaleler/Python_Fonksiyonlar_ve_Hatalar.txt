@@ -1,0 +1,15 @@
+PYTHON FONKSİYONLARI VE HATA AYIKLAMA
+
+Fonksiyonlar, belirli bir işi yapan yeniden kullanılabilir kod bloklarıdır. def ile tanımlanır ve parametre alabilir. return sonucu çağıran koda geri verir.
+
+PARAMETRELER
+Varsayılan parametre değerleri bazı girdiler verilmediğinde kullanılır. Fonksiyonların tek bir açık sorumluluğa sahip olması kodu anlamayı ve test etmeyi kolaylaştırır.
+
+İSTİSNALAR
+try ve except blokları beklenen hata türlerini yönetmek için kullanılabilir. Hataları sessizce yutmak yerine kullanıcıya anlaşılır bilgi vermek gerekir.
+
+TEST
+Normal durumların yanında boş girdi, bulunmayan dosya ve bozuk veri gibi sınır durumları da test edilmelidir. Testler, kod değişikliklerinin mevcut davranışı bozup bozmadığını kontrol etmeye de yarar.
+
+GÜVENLİK
+Kullanıcı girdisi güvenilir kabul edilmemelidir. Dosya yolları, komutlar ve metinler işlenirken beklenmedik girdiler dikkate alınmalıdır. Gereksiz yönetici yetkileriyle çalışmamak güvenli bir yaklaşımdır.

@@ -1,0 +1,15 @@
+BİLGİ GETİRME VE METİN ARAMA
+
+Bilgi getirme, bir soru veya arama ifadesine en uygun belge parçalarını bulma işlemidir. Bir sistemin her şeyi model ağırlıklarında öğrenmesi gerekmez; gerektiğinde kaynak dosyalarından ilgili metni bulabilir.
+
+ANAHTAR KELİME ARAMASI
+Basit arama, sorgudaki kelimelerin belgelerde bulunup bulunmadığına bakabilir. Kelime örtüşmesi hesaplamak kolaydır ancak eş anlamlıları ve aynı fikrin farklı ifadelerini her zaman yakalayamaz.
+
+TF-IDF
+TF-IDF, bir terimin belgede ne kadar ayırt edici olduğunu tahmin eden klasik ağırlıklandırma yaklaşımıdır. Sık geçen genel kelimelerin ağırlığı düşürülebilir; belirli belgelerde daha özgün olan kelimeler daha fazla önem kazanabilir.
+
+VEKTÖR ARAMASI
+Vektör aramasında metinler sayısal gömmelere dönüştürülür ve benzerlik ölçüleriyle karşılaştırılır. Bu yöntem kelimeleri birebir paylaşmayan ama anlamca yakın metinleri bulmaya yardımcı olabilir.
+
+KAYNAK GÖSTERME VE RAG
+Asistan, cevabını hangi dosyadan aldığını gösterebilir. RAG yaklaşımı, yanıt üretmeden önce harici bilgi kaynağından ilgili metinleri getirir. Basit yerel dosya araması bu yaklaşımın bilgi getirme tarafını uygulayabilir. Kaynak bulunması, içeriğin kesinlikle doğru olduğu anlamına gelmez.

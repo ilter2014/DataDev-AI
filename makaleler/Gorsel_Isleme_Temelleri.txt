@@ -1,0 +1,15 @@
+GÖRÜNTÜ İŞLEME VE BİLGİSAYARLI GÖRÜ
+
+Görüntü işleme, dijital görüntüler üzerinde analiz ve dönüşüm yapmayı kapsar. Bilgisayarlı görü, görüntülerden nesne, konum veya anlam gibi bilgileri çıkarmayı hedefler.
+
+PİKSEL VE RENK
+Dijital görüntü piksellerden oluşur. Gri tonlu görüntüde her piksel parlaklık değeri taşırken RGB görüntüde kırmızı, yeşil ve mavi kanalları bulunur. Piksel değerlerinin aralığı biçime bağlıdır.
+
+ÖN İŞLEME
+Görüntüler yeniden boyutlandırılabilir, normalize edilebilir ve veri artırma dönüşümlerinden geçirilebilir. Eğitim ve test aşamalarında ön işleme adımlarının tutarlı olması gerekir.
+
+SINIFLANDIRMA VE NESNE TESPİTİ
+Görüntü sınıflandırma, görüntünün hangi sınıfa ait olduğunu tahmin eder. Nesne tespiti, görüntüdeki nesnelerin sınıflarını ve yaklaşık konumlarını bulmaya çalışır.
+
+SINIRLAR
+Görüntü modelleri ışık, açı, bulanıklık ve eğitimde görülmeyen durumlara karşı hassas olabilir. Güvenilir kullanım için farklı koşullarda test yapılmalıdır.

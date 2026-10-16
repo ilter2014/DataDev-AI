@@ -1,0 +1,27 @@
+YAPAY ZEKÂDA VERİ KALİTESİ VE ETİK
+
+Bir modelin başarısı, kullandığı verinin niteliğinden önemli ölçüde etkilenir. Çok miktarda veri bulunması, verinin doğru, temsil edici veya kullanım için uygun olduğunu garanti etmez.
+
+DOĞRULUK VE GÜNCELLİK
+Eğitim metinleri yanlış bilgiler içerebilir. Eski bilgiler güncelliğini yitirebilir. Kaynakları, tarihleri ve iddiaların dayanaklarını mümkün olduğunda kontrol etmek gerekir.
+
+ÇEŞİTLİLİK VE TEMSİL
+Veri yalnızca belirli bir bakış açısını veya kullanıcı grubunu temsil ediyorsa model diğer durumlarda kötü performans gösterebilir. Temsil eksiklikleri ve toplumsal önyargılar değerlendirilmelidir.
+
+TEKRARLAR VE GÜRÜLTÜ
+Aynı metnin çok fazla tekrar etmesi bazı kalıpların aşırı öğrenilmesine yol açabilir. Bozuk kodlama, eksik cümleler ve alakasız içerikler eğitim kalitesini düşürebilir.
+
+GİZLİLİK
+Kişisel veya hassas bilgileri izinsiz biçimde veri setlerine koymamak gerekir. Veri toplarken amaç, izin, saklama süresi ve erişim kontrolleri düşünülmelidir.
+
+TELİF VE İZİN
+İnternette bulunabilen her metin sınırsız kullanım iznine sahip değildir. Kaynakların lisansları ve kullanım şartları incelenmelidir. Kendi yazdığın metinler ve izinli açık kaynaklar daha güvenli başlangıçlar olabilir.
+
+DEĞERLENDİRME SETİ
+Eğitimden ayrı tutulan değerlendirme soruları modelin yeni örneklere ne kadar genelleyebildiğini anlamaya yardımcı olur. Aynı test sorularını tekrar tekrar ayar için kullanmak ölçümü iyimserleştirebilir.
+
+YANLIŞ BİLGİ
+Dil modeli akıcı ama yanlış cevaplar üretebilir. Kritik konularda kaynak doğrulaması, açık belirsizlik ifadeleri ve gerektiğinde insan kontrolü kullanılmalıdır.
+
+SORUMLU GELİŞTİRME
+Sistemin hangi amaçla tasarlandığı, nerelerde başarısız olabileceği ve kullanıcı verisini nasıl işlediği açıkça belirtilmelidir. Hata raporları ve kullanıcı geri bildirimleri geliştirme sürecine katkı sağlayabilir.

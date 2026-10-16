@@ -1,0 +1,46 @@
+BAŞLIK: Yapay Zekanın Anatomisi: Teoriden Uygulamaya Kapsamlı Rehber
+
+GİRİŞ
+Yapay zeka (Artificial Intelligence - AI), modern bilişim dünyasının ve dijital dönüşümün en kritik taşıyıcı gücüdür. En temel ifadeyle yapay zeka; insan zekasına özgü olan öğrenme, akıl yürütme, problem çözme, algılama ve dil anlama gibi bilişsel işlevleri bilgisayar sistemlerine kazandırma disiplinidir. Geleneksel yazılımlar belirli girdilere karşılık önceden kodlanmış sabit çıktı dizilimleri üretirken, yapay zeka sistemleri veri üzerinden kalıplar çıkararak kendi kararlarını oluşturur ve sürekli gelişir.
+
+1. TEMEL KAVRAMLAR VE HİYERARŞİ
+
+Yapay zeka kavramı geniş bir şemsiyedir ve altında birbirini kapsayan alt disiplinler barındırır:
+
+* Yapay Zeka (AI): İnsan davranışlarını ve zekasını taklit eden her türlü sistem veya algoritmanın genel adıdır.
+* Makine Öğrenmesi (Machine Learning - ML): Yapay zekanın bir alt dalıdır. Sistemlerin açıkça programlanmaya ihtiyaç duymadan, veri analizi ve istatistiksel modeller aracılığıyla deneyimden öğrenmesini sağlar.
+* Derin Öğrenme (Deep Learning - DL): Makine öğrenmesinin bir alt kümesidir. İnsan beynindeki nöron ağlarından esinlenerek oluşturulan çok katmanlı Yapay Sinir Ağları (Artificial Neural Networks) vasıtasıyla karmaşık ve yapısız verileri (ses, görüntü, metin) işler.
+* Üretken Yapay Zeka (Generative AI): Mevcut verileri analiz ederek tamamen yeni ve özgün içerikler (metin, kod, görsel, müzik, video) üretebilen derin öğrenme modelleridir.
+
+2. MAKİNE ÖĞRENMESİ YÖNTEMLERİ
+
+Makine öğrenmesi modelleri, veriyi işleme ve öğrenme biçimlerine göre temel olarak üç ana kategoriye ayrılır:
+
+1. Denetimli Öğrenme (Supervised Learning): Modellerin etiketlenmiş veriler kullanılarak eğitilmesidir. Sistem, girdi ile doğru çıktı arasındaki ilişkiyi öğrenir (Örn: "Kedi" ve "Köpek" etiketiyle verilen binlerce fotoğraf üzerinden yeni bir fotoğrafı sınıflandırma).
+2. Denetimsiz Öğrenme (Unsupervised Learning): Modellere etiketlenmemiş veri verilir. Sistem, verinin içindeki gizli kalıpları, benzerlikleri ve kümelenmeleri kendi kendine keşfeder (Örn: Müşteri segmentasyonu, veri kümeleme).
+3. Pekiştirmeli Öğrenme (Reinforcement Learning): Bir ajanın (agent), sanal veya gerçek bir ortamda ödül-ceza mekanizması ile en uygun stratejiyi deneme-yanılma yoluyla öğrenmesidir (Örn: Otonom araç sürüşü, satranç ve Go gibi oyun oynayan algoritmalar).
+
+3. BÜYÜK DİL MODELLERİ VE DOĞAL DİL İŞLEME (NLP)
+
+Doğal Dil İşleme (Natural Language Processing - NLP), bilgisayarların insan dilini anlaması, yorumlaması ve üretmesiyle ilgilenen yapay zeka dalıdır.
+
+* Transformer Mimarisi: Günümüzdeki gelişmiş dil modellerinin temelini oluşturan, metindeki kelimeler arasındaki anlamsal ilişkileri ve bağlamı yüksek paralellikle işleyebilen bir mimaridir.
+* Büyük Dil Modelleri (LLM): Milyarlarca parametre ile devasa metin verileri üzerinde eğitilmiş modellerdir. Kod yazma, metin özetleme, soru yanıtlama ve yaratıcı içerik oluşturma gibi çok geniş bir yelpazede görev yapabilirler.
+
+4. YAPAY ZEKANIN SIRA DIŞI UYGULAMA ALANLARI
+
+* Sağlık ve Tıp: Tıbbi görüntüleme (MR, BT) analizi ile kanser teșhislerinin hızlandırılması, genetik dizilim analizi ve kişiselleştirilmiş ilaç tasarımı.
+* Finans ve Bankacılık: Gerçek zamanlı dolandırıcılık (fraud) tespiti, otomatik borsa alım-satım algoritmaları ve kredi risk değerlendirmesi.
+* Otomotiv ve Lojistik: Otonom araçlar, akıllı trafik yönetim sistemleri ve tedarik zinciri optimizasyonu.
+* Yazılım ve Sanayi: Otomatik kod üretimi, hata ayıklama (debugging), kestirimci bakım (predictive maintenance) ile fabrika makinelerinin arıza yapmadan önce tespit edilmesi.
+
+5. ETİK, GÜVENLİK VE GELECEK BAKIŞI
+
+Yapay zekanın yaygınlaşması, beraberinde birtakım etik ve teknik sorumluluklar getirmektedir:
+
+* Veri Yanlılığı (Bias): Yapay zeka, eğitildiği verideki insan merkezli önyargıları öğrenebilir ve kararlarında ayrımcılık yapabilir.
+* Şeffaflık ve Açıklanabilirlik: Karmaşık derin öğrenme modellerinin ("Kara Kutular") karar alma süreçlerinin insanlar tarafından anlaşılabilir olması kritik bir gereksinimdir.
+* Telif ve Güvenlik: Üretken sistemlerin ürettiği içeriklerin mülkiyet hakları, veri gizliliği ve siber güvenlik tehditleri aktif olarak düzenleme (regülasyon) altındadır.
+
+SONUÇ
+Yapay zeka, insanoğlunun geliştirdiği en güçlü araçlardan biridir. Amacı insanların yerini almak değil; yeteneklerimizi artırmak, rutin işleri otomatize etmek ve insan yaratıcılığını daha üst seviyelere taşımaktır. Bu teknolojiyi teorisi ve etik ilkeleriyle anlamak, geleceğin dijital dünyasında yer almanın en temel adımıdır.

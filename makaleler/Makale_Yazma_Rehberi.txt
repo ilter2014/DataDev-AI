@@ -1,0 +1,18 @@
+MAKALE YAZMA VE BİLGİYİ DÜZENLEME REHBERİ
+
+Bilgi dosyaları bir asistanın arama yapmasını kolaylaştıracak biçimde yazılmalıdır. Her dosya mümkünse tek bir ana konuya odaklanmalıdır.
+
+BAŞLIK
+Dosyanın başında açık bir başlık kullan. Alt başlıklar konuları bölümlere ayırır. Dosya adında boşluk yerine alt çizgi kullanmak dosya yönetimini kolaylaştırabilir.
+
+PARAGRAF
+Her paragraf tek bir ana fikri açıklamalıdır. Çok uzun ve farklı konuları birleştiren paragraflar, basit arama sistemlerinin ilgili bölümü bulmasını zorlaştırabilir.
+
+DOĞRULUK
+Tanımlar doğru ve açık olmalıdır. Bilinmeyen bir ayrıntıyı kesinmiş gibi yazmamak gerekir. Sayılar, tarih ve teknik terimler mümkün olduğunda doğrulanmalıdır.
+
+KAYNAKLAR
+Dış kaynaklardan yararlanıldığında kaynak başlığı, yazar ve bağlantı gibi bilgiler kaydedilebilir. İçerik kullanım izinleri ve telif koşulları gözetilmelidir.
+
+GÜNCELLEME
+Tekrarlanan veya birbiriyle çelişen bilgiler düzenli olarak kontrol edilmelidir. Dosya güncellendikten sonra CMD sohbetinde /yenile komutu çalıştırılarak kaynaklar yeniden okunabilir.

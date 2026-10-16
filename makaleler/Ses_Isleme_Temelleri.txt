@@ -1,0 +1,15 @@
+SES İŞLEME VE KONUŞMA
+
+Dijital ses, zaman içinde ölçülen sayısal örneklerden oluşabilir. Ses işleme; gürültü azaltma, konuşma tanıma, ses sınıflandırma ve ses üretimi gibi görevleri içerir.
+
+ÖRNEKLEME HIZI
+Örnekleme hızı saniyede alınan ses ölçümü sayısını ifade eder. Yeterli örnekleme hızı kaydedilecek frekans aralığına bağlıdır. Daha yüksek hız daha fazla veri anlamına gelebilir.
+
+DALGA BİÇİMİ VE SPEKTROGRAM
+Dalga biçimi ses genliğinin zaman içindeki değişimini gösterir. Spektrogram, frekans içeriğinin zamanla nasıl değiştiğini görselleştirir ve konuşma analizinde yararlı olabilir.
+
+KONUŞMA TANIMA
+Konuşma tanıma, ses sinyalini metne dönüştürmeye çalışır. Aksan, arka plan gürültüsü, mikrofon kalitesi ve dil desteği doğruluğu etkileyebilir.
+
+METİNDEN KONUŞMA VE GİZLİLİK
+Metinden konuşma sistemleri metni ses dalgasına dönüştürür. Doğal telaffuz ve duraklamalar kaliteyi etkiler. Ses kayıtları kişisel bilgi içerebilir; kayıtların işlenmesinde izin ve güvenlik dikkate alınmalıdır.
