@@ -1,52 +1,52 @@
-# DataDev AI — 3 cihazli dagitik egitim (Windows)
+# DataDev AI — 500K model ve 3 cihazlı eğitim (Windows)
 
-## Yedek ve model
+## GitHub yedeği
+- Özel depo: https://github.com/ilter2014/DataDevAI-Git
+- Tam proje yedeği: `backup/full-project-20261016` dalı
+- Model: `datadev_gpt_v5_model.pt`; yaklaşık 497.490 parametre (vocabulary değişirse sayı değişebilir).
+- Bu sistem görevleri üç bilgisayara dağıtır; bilgisayarları tek bir RAM/CPU gibi birleştirmez. Sonuçlar merkezde doğrulanır.
 
-- GitHub deposu: https://github.com/ilter2014/DataDev-AI
-- Model: `datadev_gpt_v5_model.pt`
-- Modelin benzersiz parametre sayisi: 497,490 (137 karakterlik mevcut kelime dagarcigiyla). Checkpoint state-dict tensor toplami tied embedding nedeniyle daha yuksek gorunebilir.
-- Bu sistem CPU islerini dagitir; uc bilgisayari tek bir RAM/CPU gibi birlestirmez.
-- Aday model, tum isler bitince yonetici tarafindan birlestirilir. Dogrulama kaybi kotulesirse aktif model korunur.
+## Ağ kararı: Radmin VPN
+Üç cihazda da Radmin VPN kurulu olmalı ve aynı özel Radmin ağına katılmalılar. Radmin IPv4 adresini `ipconfig` ile bul; genellikle `26.x.x.x` biçimindedir. Ağ adı/parolasını herkese açık paylaşma.
+
+**Koordinatör portunu VDS'nin genel IP'sine açma.** Sunucu yalnızca VDS'nin Radmin IPv4 adresine bağlanır; Windows Firewall kuralı yalnızca İlter ve Mert'in Radmin IP'lerine TCP 8765 izni verir. Radmin VPN üzerinden HTTP kullanılabilir; bu adresi VPN dışından kullanma.
 
 ## 1. VDS (Windows Server 2022)
+1. VDS'ye Radmin VPN kur ve aynı özel ağa katıl.
+2. Proje dosyalarını GitHub'dan al. VDS'nin GitHub erişimi yoksa proje ZIP'ini güvenli şekilde aktar:
+   ```bat
+   git clone --branch backup/full-project-20261016 https://github.com/ilter2014/DataDevAI-Git.git DataDevAI
+   ```
+3. `cluster_vds_setup.bat` çalıştır; Python ve PyTorch CPU kurulur, gizli anahtarlar oluşturulur.
+4. `cluster_vds_firewall_setup.bat` dosyasına sağ tıklayıp **Yönetici olarak çalıştır**. VDS'nin Radmin IPv4 adresini ve İlter/Mert'in Radmin IPv4 adreslerini gir.
+5. `cluster_vds_start.bat` çalıştır ve aynı VDS Radmin IP'sini gir. Koordinatör o adrese TCP 8765 üzerinde bağlanır.
+6. İkinci terminalde `cluster_vds_worker_start.bat` çalıştır, aynı Radmin IP'sini gir.
 
-1. Git kuruluysa: `git clone https://github.com/ilter2014/DataDev-AI.git DataDevAI`
-2. Proje klasorunde `cluster_vds_setup.bat` dosyasini calistir. Python sanal ortami, PyTorch ve iki rastgele anahtar hazirlanir.
-3. `cluster_secrets.txt` dosyasini VDS'de gizli tut. GitHub'a yukleme. Admin anahtari yalnizca yonetici PC'de; worker anahtari worker bilgisayarlarda kullanilir.
-4. Tailscale'i VDS, Ilter PC ve Mert PC'ye kur; ucunu ayni ozel tailnet'e kat.
-5. `cluster_vds_start.bat` calistir. Koordinator yalnizca `127.0.0.1:8765` uzerinde dinler.
-6. VDS'de Tailscale Serve HTTPS kurulumunu tamamla; kurulu surumun yardimini kontrol et. Public HTTP veya public 8765 portu kullanma.
-7. VDS'de ikinci terminalde `cluster_vds_worker_start.bat` calistir. Bu worker, ayni makinedeki koordinatora baglanir.
-
-## 2. Ilter PC ve Mert PC
-
+## 2. İlter PC ve Mert PC
 Her bilgisayarda:
-1. Projeyi GitHub'dan klonla (Mert'in private depoya erisimi yoksa projeyi guvenli yoldan ZIP olarak aktar).
-2. Proje klasorunde `cluster_worker_setup.bat` calistir.
-3. `cluster_worker_start.bat` calistir.
-4. Koordinatorun Tailscale HTTPS adresini yaz.
-5. Worker kimligini gir: kendi PC'n icin `ilter-pc`, Mert icin `mert-pc`.
-6. VDS'deki `DATADEV_CLUSTER_WORKER_TOKEN` degerini gizli token istemine gir. Bu pencereyi egitim boyunca acik tut.
+1. Radmin VPN'i aç; aynı özel ağa katıl. `ipconfig` ile kendi Radmin IP'ni öğren.
+2. Tam proje klasörünü `backup/full-project-20261016` dalından al. Mert'in özel depoya erişimi yoksa ona yalnızca worker dosyalarını içeren paket gönder.
+3. `cluster_worker_setup.bat` çalıştır.
+4. `cluster_worker_start.bat` çalıştır.
+5. VDS Radmin adresini `http://VDS_RADMIN_IP:8765` biçiminde gir; worker kimliği olarak İlter için `ilter-pc`, Mert için `mert-pc` seç.
+6. VDS'deki `cluster_secrets.txt` dosyasından yalnızca WORKER_TOKEN değerini güvenli biçimde gir. Admin token'ı Mert'e gönderme.
 
-## 3. Yonetici (Ilter PC)
+## 3. Eğitim turunu başlatma
+1. İlter PC'de `DataDev AI - Küme Yönetim Merkezi.bat` çalıştır.
+2. VDS Radmin URL'sini ve ADMIN_TOKEN'ı gir.
+3. Önce [1] ile bağlantıyı doğrula.
+4. [2] ile küçük bir tur oluştur; ilk test için işçi başına 10–20 adım seç.
+5. Üç worker da sonuçlarını VDS'ye gönderene kadar bekle.
+6. Round ID'yi sakla; [3] ile sonuçları birleştir ve validation kontrolünü çalıştır. Loss kötüleşirse mevcut model korunur.
 
-- VDS'deki `DATADEV_CLUSTER_ADMIN_TOKEN` degerini yonetici uygulamasinin gizli anahtar istemine gir.
-- `DataDev AI - Kume Yonetim Merkezi.bat` dosyasini calistir.
-- Secenek 1: baglanti/durum.
-- Secenek 2: yeni tur; ilk denemede her worker icin 10–20 adim onerilir.
-- Uc worker da bitince Secenek 3 ile Round ID'yi birlestir.
-- Sonuc baseline/candidate validation loss ile raporlanir. Daha kotu adaysa aktif checkpoint degistirilmez.
+## 12 saat açık bırakmadan önce
+- İlk önce 1 küçük turu baştan sona test et; başarı görülmeden 12 saatlik oturum başlatma.
+- Bilgisayarların uyku modunu kapat; internet ve elektrik kesilmemeli.
+- Her worker penceresini açık tut. Durdurmak için Ctrl+C.
+- Görevler ve sonuçlar VDS'de `datadev_cluster` altında tutulur. Eğitim kayıtlarını ve model sürümlerini düzenli yedekle.
 
-## 4. 12 saatlik calisma
-
-- Her worker penceresini acik birak. Windows uyku/hibernation kapali olmali; elektrik ve internet kesilmemeli.
-- Ilk turu kucuk adimla test et. 12 saat boyunca ayni turu tekrar tekrar otomatik olusturma; once her turu incele ve dogrula.
-- Model birlestirme yonetici onayi gerektirir; worker PC'leri kendi basina rastgele komut calistirmaz.
-
-## Guvenlik
-
-- `cluster_secrets.txt` ve `.venv/` GitHub'a yuklenmez; `.gitignore` tarafindan dislanir.
-- Admin token sadece yonetici uygulamasinda; worker token sadece worker istemcilerinde.
-- Token'lari sohbetlere, ekran goruntulerine veya herkese acik yerlere koyma.
-- Koordinator portu 8765'i internete acma; uzak baglanti icin Tailscale HTTPS/ozel ag kullan.
-- Bu ilk prototip CPU tabanli FedAvg'dir. Model kalitesi sadece parametre sayisiyla olculmez.
+## Güvenlik ve teknik sınırlar
+- `cluster_secrets.txt`, API anahtarları, tokenlar ve yerel .env dosyaları GitHub'a yüklenmez.
+- Worker'lar rastgele komut çalıştırmaz; yalnızca sabit eğitim kodunu çalıştırır.
+- Radmin VPN ağı dışından `http://26.x.x.x:8765` kullanma. Genel IP'de port yönlendirme yapma.
+- Bu ilk sürüm CPU tabanlı FedAvg prototipidir. Parametre sayısı tek başına modelin zekâsını göstermez.

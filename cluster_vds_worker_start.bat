@@ -19,5 +19,12 @@ if "%DATADEV_CLUSTER_WORKER_TOKEN%"=="" (
   pause
   exit /b 1
 )
-".venv\Scripts\python.exe" -X utf8 datadev_cluster_worker.py --server http://127.0.0.1:8765 --worker-id vds-worker
+set /p "RADMIN_IP=VDS Radmin VPN IPv4 adresi (26.x.x.x): "
+if "%RADMIN_IP:~0,3%" NEQ "26." (
+  echo HATA: Radmin VPN IPv4 adresi olmali.
+  pause
+  exit /b 1
+)
+set "DATADEV_CLUSTER_WORKER_TOKEN=%DATADEV_CLUSTER_WORKER_TOKEN%"
+".venv\Scripts\python.exe" -X utf8 datadev_cluster_worker.py --server http://%RADMIN_IP%:8765 --worker-id vds-worker
 pause

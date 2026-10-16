@@ -94,8 +94,11 @@ def main():
     args = parser.parse_args()
     base_url = args.server.rstrip("/")
     parsed = urllib.parse.urlparse(base_url)
-    if parsed.scheme != "https" and parsed.hostname not in ("127.0.0.1", "localhost", "::1"):
-        raise SystemExit("Güvenlik: uzaktaki sunucu için HTTPS kullan. HTTP yalnızca localhost testinde izinli.")
+    host = parsed.hostname or ""
+    is_radmin = parsed.scheme == "http" and host.startswith("26.") and parsed.port == 8765
+    is_local = parsed.scheme == "http" and host in ("127.0.0.1", "localhost", "::1")
+    if not (parsed.scheme == "https" or is_radmin or is_local):
+        raise SystemExit("Güvenlik: HTTPS veya yalnızca Radmin VPN üzerindeki http://26.x.x.x:8765 kullan. Genel HTTP yasak.")
     if len(args.token) < 32:
         raise SystemExit("DATADEV_CLUSTER_WORKER_TOKEN veya --token en az 32 karakter olmalı.")
     torch.set_num_threads(1)

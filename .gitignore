@@ -30,3 +30,6 @@ datadev_api_errors.log
 cluster_secrets.txt
 cluster_secrets.*
 Mert-Worker-Paketi/
+
+# Locally generated share package
+Mert-Worker-Paketi.zip

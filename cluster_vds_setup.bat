@@ -45,8 +45,9 @@ echo KURULUM TAMAM.
 echo 1. cluster_secrets.txt dosyasini guvenli tut.
 echo 2. ADMIN_TOKEN yalnizca yonetici PC'de kullanilacak.
 echo 3. WORKER_TOKEN Ilter, Mert ve VDS worker icin kullanilacak.
-echo 4. Tailscale'i VDS + iki PC'de kurup ayni ozel aga bagla.
-echo 5. VDS'de cluster_vds_start.bat dosyasini calistir.
+echo 4. Radmin VPN'i uc cihaza kurup ayni ozel Radmin agina katil.
+echo 5. Once cluster_vds_firewall_setup.bat dosyasini YONETICI olarak calistir.
+echo 6. VDS'de cluster_vds_start.bat dosyasini calistir.
 notepad cluster_secrets.txt
 pause
 exit /b 0

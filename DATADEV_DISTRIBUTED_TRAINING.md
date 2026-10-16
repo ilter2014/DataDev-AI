@@ -1,62 +1,27 @@
-# DataDev AI — 500k model and distributed training
+# DataDev AI — 500K model ve Radmin VPN ile dağıtık eğitim
 
-## Current model
+Bu prototip, Windows VDS + İlter PC + Mert PC arasında CPU eğitim görevlerini dağıtır. Üç cihaz tek bir RAM/CPU gibi davranmaz; her worker kendi eğitim parçasını işler, güncellemesini VDS'ye gönderir ve yönetici açıkça onaylayınca FedAvg ile birleştirilir.
 
-- v4 remains unchanged.
-- v5 uses a 138-dimensional embedding, 6 attention heads and 2 transformer layers.
-- The actual parameter count is computed with `sum(p.numel() for p in model.parameters())`; it is about 497k with the current vocabulary. The exact count changes if the character vocabulary changes.
-- Checkpoint: `datadev_gpt_v5_model.pt`.
-- The local v5 run completed 1,200 steps. Validation loss fell from 4.677 to 2.342 (best checkpoint at step 1,200). See `DATADEV_GPT_V5_TRAINING_REPORT.md` and `datadev_gpt_v5_loss_grafik.svg`. This measures next-character prediction only; the generated sample is still rough and should not be described as fluent or reliable.
+**Güncel Windows kurulum adımları:** `CLUSTER_QUICKSTART_TR.md` dosyasını takip et. Eski Tailscale/HTTPS örneklerini kullanma; mevcut kurulum Radmin VPN arayüzüne özel bağlanacak şekilde düzenlenmiştir.
 
-## Security first
+## Model
+- Aktif eğitim mimarisi: `datadev_gpt_v5.py`, checkpoint `datadev_gpt_v5_model.pt`.
+- Parametre sayısı mevcut vocabulary ile yaklaşık 497.490'dır; vocabulary değişince sayı da değişebilir.
+- Önceki yerel eğitimde 1.200 adımda validation loss 4.677'den 2.342'ye indi. Bu yalnızca sonraki karakter tahmin kaybıdır; akıcı veya güvenilir sohbet becerisini kanıtlamaz.
 
-The coordinator uses separate admin and worker bearer tokens. Set both as environment variables; never save them in source files or GitHub. The worker does not execute arbitrary shell commands. It only trains a fixed model on the shard assigned by the coordinator and returns weights.
+## Güvenlik
+- VDS'de `cluster_secrets.txt` iki ayrı rastgele anahtar tutar: ADMIN_TOKEN ve WORKER_TOKEN. Bu dosya GitHub'a eklenmez.
+- Admin token yalnızca İlter'in yönetim uygulamasında; worker token yalnızca worker cihazlarında kullanılmalıdır. Mert'e admin token verilmez.
+- Koordinatör sadece VDS'nin Radmin VPN IPv4 adresinde TCP 8765 dinler. Windows Firewall sadece İlter ve Mert'in Radmin IPv4 adreslerine izin verir.
+- Genel IP'de port yönlendirme yapma; VDS sağlayıcı güvenlik duvarında 8765'i herkese açma. Radmin VPN dışından HTTP adresine erişim verme.
+- Worker'lar keyfi komut çalıştırmaz; yalnızca sabit eğitim görevini işler.
 
-**Do not expose the coordinator directly to the public internet over HTTP.** For remote PCs, use HTTPS through a reverse proxy (for example, a Tailscale HTTPS endpoint). Do not send bearer tokens over plain remote HTTP. The server binds to localhost by default.
+## İlk test
+1. Her cihazın Radmin IP'sini doğrula.
+2. VDS'de `cluster_vds_setup.bat`, ardından yönetici olarak `cluster_vds_firewall_setup.bat` çalıştır.
+3. VDS'de `cluster_vds_start.bat` ve ikinci pencerede `cluster_vds_worker_start.bat` aç.
+4. İlter ve Mert cihazlarında `cluster_worker_setup.bat` ve `cluster_worker_start.bat` aç.
+5. İlter PC'de `DataDev AI - Küme Yönetim Merkezi.bat` ile bağlantıyı kontrol et, 10–20 adımlık bir tur başlat.
+6. Üç worker da bitirdikten sonra Round ID ile birleştirme yap. Doğrulama kaybı kötüleşirse mevcut checkpoint korunmalıdır.
 
-## Start the coordinator (on the VDS)
-
-Install Python 3.11+ and PyTorch CPU, then copy/clone this project folder to the VDS. Make sure `datadev_gpt_v5_model.pt` exists first.
-
-In PowerShell, set two random secrets (each at least 32 characters) in the environment, then run:
-
-```powershell
-$env:DATADEV_CLUSTER_ADMIN_TOKEN = "PUT_A_RANDOM_ADMIN_SECRET_HERE"
-$env:DATADEV_CLUSTER_WORKER_TOKEN = "PUT_A_DIFFERENT_RANDOM_WORKER_SECRET_HERE"
-python -X utf8 datadev_cluster_server.py --host 127.0.0.1 --port 8765
-```
-
-Put an HTTPS reverse proxy in front of port 8765, or use a private encrypted network and configure the listener accordingly. Do not reuse the example test tokens.
-
-## Start workers
-
-On İlter's PC and Mert's PC, install the same project code and PyTorch CPU. Set the worker token and use the HTTPS coordinator URL:
-
-```powershell
-$env:DATADEV_CLUSTER_WORKER_TOKEN = "THE_WORKER_SECRET_FROM_THE_VDS"
-python -X utf8 datadev_cluster_worker.py --server https://YOUR-COORDINATOR-DOMAIN --worker-id ilter-pc
-```
-
-Mert uses `--worker-id mert-pc`. On the VDS, a local worker can use `--server http://127.0.0.1:8765 --worker-id vds-worker` in another PowerShell window. Keep all worker IDs exactly as supplied when creating a round.
-
-## Create and aggregate a training round
-
-In a separate admin PowerShell window:
-
-```powershell
-$env:DATADEV_CLUSTER_ADMIN_TOKEN = "THE_ADMIN_SECRET_FROM_THE_VDS"
-python -X utf8 datadev_cluster_admin.py --server https://YOUR-COORDINATOR-DOMAIN create-round --workers ilter-pc mert-pc vds-worker --steps 20
-```
-
-The command prints a `round_id`. Wait until all three workers have returned their updates, then run:
-
-```powershell
-python -X utf8 datadev_cluster_admin.py --server https://YOUR-COORDINATOR-DOMAIN status
-python -X utf8 datadev_cluster_admin.py --server https://YOUR-COORDINATOR-DOMAIN aggregate --round-id YOUR_ROUND_ID
-```
-
-Aggregation is explicit: the server will refuse to merge a round until every task in that round is complete. It checks update tensor shapes, backs up the previous checkpoint, and compares validation loss before accepting a candidate; if validation loss gets worse beyond the safety margin, the active model is kept. Workers automatically download a newer central checkpoint on their next poll.
-
-## Important limitations
-
-This is a first distributed-training prototype using weighted FedAvg of CPU model updates. It is not a production-grade distributed training framework. Start with 10–20 steps per worker and evaluate validation loss before raising the step count. Keep the best known checkpoint separately. The VDS and Mert's PC have not been connected or deployed by this local setup yet; they must be configured using the steps above.
+12 saatlik oturuma ancak ilk küçük tur başarılı olduktan sonra geç. Windows uyku modunu kapat; worker pencerelerini açık bırak. Eğitim sırasında elektrik/internet kesilirse bitmemiş görevleri yeniden kontrol et.
