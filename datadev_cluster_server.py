@@ -206,6 +206,12 @@ class Handler(BaseHTTPRequestHandler):
                         result_path = RESULTS / task["result_file"]
                         state = torch.load(result_path, map_location="cpu", weights_only=True)
                         updates.append((state, max(1, int(task.get("sample_count", 1)))))
+                    checkpoint = model_checkpoint()
+                    base_state = checkpoint["model"]
+                    expected_keys = set(base_state.keys())
+                    for state, _ in updates:
+                        if set(state.keys()) != expected_keys or any(state[k].shape != base_state[k].shape for k in expected_keys):
+                            return send_json(self, 400, {"error": "Model güncellemesi mimariyle uyuşmuyor; mevcut model korunuyor."})
                     keys = updates[0][0].keys()
                     total = sum(weight for _, weight in updates)
                     averaged = {}
@@ -218,7 +224,13 @@ class Handler(BaseHTTPRequestHandler):
                             averaged[key] = acc
                         else:
                             averaged[key] = first
-                    checkpoint = model_checkpoint()
+                    meta = load_json(ROOT / "meta.json", {"version": 0})
+                    backup_dir = ROOT / "backups"
+                    backup_dir.mkdir(parents=True, exist_ok=True)
+                    version = int(meta.get("version", 0))
+                    backup_path = backup_dir / f"datadev_gpt_v5_model_v{version}.pt"
+                    if not backup_path.exists():
+                        backup_path.write_bytes(MODEL_FILE.read_bytes())
                     checkpoint["model"] = averaged
                     checkpoint.setdefault("config", {})["distributed_round"] = round_id
                     checkpoint["config"]["federated_workers"] = len(updates)

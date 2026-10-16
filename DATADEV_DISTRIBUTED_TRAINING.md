@@ -12,7 +12,7 @@
 
 The coordinator uses separate admin and worker bearer tokens. Set both as environment variables; never save them in source files or GitHub. The worker does not execute arbitrary shell commands. It only trains a fixed model on the shard assigned by the coordinator and returns weights.
 
-**Do not expose the coordinator directly to the public internet over HTTP.** For remote PCs, use HTTPS through a reverse proxy or a private encrypted network such as Tailscale. The server binds to localhost by default.
+**Do not expose the coordinator directly to the public internet over HTTP.** For remote PCs, use HTTPS through a reverse proxy (for example, a Tailscale HTTPS endpoint). Do not send bearer tokens over plain remote HTTP. The server binds to localhost by default.
 
 ## Start the coordinator (on the VDS)
 
