@@ -65,7 +65,8 @@ def sync_model(base_url, token, worker_id):
     try:
         local_version = int(marker.read_text(encoding="utf-8").strip())
     except (OSError, ValueError):
-        local_version = -1
+        # Do not replace an existing local checkpoint with an unversioned v0 model.
+        local_version = 0 if (BASE / "datadev_gpt_v5_model.pt").exists() else -1
     response = request_json(base_url + "/api/model", token, timeout=120)
     remote_version = int(response.get("version", 0))
     if remote_version <= local_version:
