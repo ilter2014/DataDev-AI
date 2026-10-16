@@ -6,7 +6,7 @@
 - v5 uses a 138-dimensional embedding, 6 attention heads and 2 transformer layers.
 - The actual parameter count is computed with `sum(p.numel() for p in model.parameters())`; it is about 497k with the current vocabulary. The exact count changes if the character vocabulary changes.
 - Checkpoint: `datadev_gpt_v5_model.pt`.
-- The first local smoke-test run was 10 steps only. Its falling validation loss is a basic wiring check, not proof of useful language ability.
+- The local v5 run completed 1,200 steps. Validation loss fell from 4.677 to 2.342 (best checkpoint at step 1,200). See `DATADEV_GPT_V5_TRAINING_REPORT.md` and `datadev_gpt_v5_loss_grafik.svg`. This measures next-character prediction only; the generated sample is still rough and should not be described as fluent or reliable.
 
 ## Security first
 
